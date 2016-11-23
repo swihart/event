@@ -2,8 +2,11 @@ Package: event
 Version: 1.0
 Title: Event History Procedures and Models
 Author: Jim Lindsey <jlindsey@gen.unimaas.nl>
-Maintainer:  Jim Lindsey <jlindsey@gen.unimaas.nl>
-Depends: R (>= 1.4), rmutil
+Maintainer: Jim Lindsey <jlindsey@gen.unimaas.nl>
+Depends:
+    R (>= 1.4),
+    rmutil
 Description: Functions for setting up and analyzing event history data.
 License: GPL version 2 or later
 URL: popgen.unimaas.nl/~jlindsey/rcode.html
+RoxygenNote: 5.0.1

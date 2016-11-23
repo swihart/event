@@ -27,6 +27,46 @@
 #
 #    Function to fit overdispersed count data as a birth process
 
+
+
+
+
+
+
+
+
+#' Fit Overdispersed Count Data as a Birth Process
+#' 
+#' \code{pbirth} fits binomial, binomial exponential, binomial logistic,
+#' binomial total, Poisson, Poisson exponential, negative binomial,
+#' gen(eralized) negative binomial, and generalized negative binomial processes
+#' as a birth process.
+#' 
+#' 
+#' @param frequencies Vector of frequencies or a matrix with each row a
+#' different series of frequencies.
+#' @param p Vector of initial estimates.
+#' @param intensity The intensity function of the process: binomial, binomial
+#' exdponential, binomial logistic, binomial total, Poisson, Poisson
+#' exponential, negative binomial, or gen(eralized) negative binomial.
+#' @param type Algorithm used for matrix exponentiation: spectral decomposition
+#' or series approximation.
+#' @param others Arguments controlling \code{\link{nlm}}.
+#' @author J.K. Lindsey
+#' @references Faddy, M.J. and Fenlon, J.S. (1999) Stochastic modelling of the
+#' invasion process of nematodes in fly larvae. Applied Statistics 48: 31-37.
+#' @keywords models
+#' @examples
+#' 
+#' y <- rnbinom(100,2,0.6)
+#' fr <- tabulate(y)
+#' pbirth(fr, p=log(-log(0.7)), intensity="Poisson", type="series")
+#' pbirth(fr, p=c(log(-log(0.7)),log(5)),
+#' 	intensity="negative binomial", type="series")
+#' pbirth(fr, p=c(log(-log(0.7)),log(5),-1),
+#' 	intensity="gen negative binomial", type="series")
+#' 
+#' @export pbirth
 pbirth <- function(frequencies, p, intensity="negative binomial",
 	type="spectral decomposition", print.level=0, ndigit=10,
 	gradtol=0.00001, steptol=0.00001, fscale=1, iterlim=100,

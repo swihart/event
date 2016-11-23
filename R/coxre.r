@@ -30,6 +30,69 @@
 # event history data: a review of progress and outstanding problems.
 # Statistics in Medicine 7: 819-841
 
+
+
+
+
+
+
+
+
+#' Cox Proportional Hazards Model with Random Effect
+#' 
+#' \code{coxre} fits a Cox proportional hazards model to event history data
+#' using a gamma distribution random effect. The parameter, gamma, is the
+#' variance of this mixing distribution.
+#' 
+#' If a matrix of response times is supplied, the model can be stratified by
+#' columns, i.e. a different intensity function is fitted for each column. To
+#' fit identical intensity functions to all response types, give the times as a
+#' vector.
+#' 
+#' 
+#' @param response Vector or matrix of times to events, with one column per
+#' type of response (or subunit).
+#' @param censor Corresponding vector or matrix of censoring indicators. If
+#' NULL all values are set to one.
+#' @param nest Vector indicating to which unit each observation belongs.
+#' @param cov One covariate
+#' @param stratified If TRUE, a model stratified on type of response (the
+#' columns of response) is fitted instead of proportional intensities.
+#' @param cumul Set to TRUE if response times are from a common origin instead
+#' of times to (or between) events.
+#' @param estimate Initial estimate of the frailty parameter.
+#' @param iter Maximum number of iterations allowed for the inner EM loop.
+#' @param others Plotting control options.
+#' @author D.G. Clayton and J.K. Lindsey
+#' @seealso \code{\link[event]{kalsurv}}.
+#' @references Clayton, D. (1987) The analysis of event history data: a review
+#' of progress and outstanding problems.  Statistics in Medicine 7: 819-841
+#' @keywords models
+#' @examples
+#' 
+#' # 11 individuals, each with 5 responses
+#' y <- matrix(c(51,36,50,35,42,
+#' 	27,20,26,17,27,
+#' 	37,22,41,37,30,
+#' 	42,36,32,34,27,
+#' 	27,18,33,14,29,
+#' 	43,32,43,35,40,
+#' 	41,22,36,25,38,
+#' 	38,21,31,20,16,
+#' 	36,23,27,25,28,
+#' 	26,31,31,32,36,
+#' 	29,20,25,26,25),ncol=5,byrow=TRUE)
+#' # Different intensity functions
+#' coxre(response=y, censor=matrix(rep(1,55),ncol=5), nest=1:11,
+#' 	est=0.7, stratified=TRUE)
+#' # Proportional intensity functions for the five responses
+#' coxre(response=y, censor=matrix(rep(1,55),ncol=5), nest=1:11,
+#' 	est=0.7, stratified=FALSE)
+#' # Identical intensity functions
+#' coxre(response=as.vector(t(y)), censor=rep(1,55),
+#' 	nest=rep(1:11,rep(5,11)), est=0.7)
+#' 
+#' @export coxre
 coxre <- function(response, censor, nest=NULL, cov=NULL, stratified=FALSE,
 	cumul=FALSE,estimate=1, iter=10, print.level=0, ndigit=10,
 	gradtol=0.00001, steptol=0.00001, iterlim=100, fscale=1,
@@ -183,6 +246,108 @@ for(k in 1:dim(response)[2]){
 	interval <- c(interval,nint+tot)
 	nnest <- c(nnest,id)
 	counts <- c(counts,nevent)
+
+
+
+
+
+
+
+
+#' Event History Analysis Library
+#' 
+#' \code{\link[event]{autointensity}} Plot Autointensity Function of a Point
+#' Process
+#' 
+#' \code{\link[event]{bp}} Create a Vector of Cumulative Numbers of Previous
+#' Events for a Point Process
+#' 
+#' \code{\link[event]{coxre}} Cox Proportional Hazards Model with Random Effect
+#' 
+#' \code{\link[event]{cprocess}} Counting Process Plot
+#' 
+#' \code{\link[event]{ehr}} Fit an Intensity Function to Event Histories
+#' 
+#' \code{\link[event]{hboxcox}} Log Hazard Function for a Box-Cox Process
+#' 
+#' \code{\link[event]{hburr}} Log Hazard Function for a Burr Process
+#' 
+#' \code{\link[event]{hcauchy}} Log Hazard Function for a Cauchy Process
+#' 
+#' \code{\link[event]{hexp}} Log Hazard Function for an Exponential (Poisson)
+#' Process
+#' 
+#' \code{\link[event]{hgamma}} Log Hazard Function for a Gamma Process
+#' 
+#' \code{\link[event]{hgextval}} Log Hazard Function for an Extreme Value
+#' Process
+#' 
+#' \code{\link[event]{hggamma}} Log Hazard Function for a Generalized Gamma
+#' Process
+#' 
+#' \code{\link[event]{hglogis}} Log Hazard Function for a Generalized Logistic
+#' Process
+#' 
+#' \code{\link[event]{hgweibull}} Log Hazard Function for a Generalized Weibull
+#' Process
+#' 
+#' \code{\link[event]{hhjorth}} Log Hazard Function for a Hjorth Process
+#' 
+#' \code{\link[event]{hinvgauss}} Log Hazard Function for a Inverse Gauss
+#' Process
+#' 
+#' \code{\link[event]{hlaplace}} Log Hazard Function for a Laplace Process
+#' 
+#' \code{\link[event]{hlnorm}} Log Hazard Function for a Log Normal Process
+#' 
+#' \code{\link[event]{hlogis}} Log Hazard Function for a Logistic Process
+#' 
+#' \code{\link[event]{hnorm}} Log Hazard Function for a Normal Process
+#' 
+#' \code{\link[event]{hpareto}} Log Hazard Function for a Pareto Process
+#' 
+#' \code{\link[event]{hskewlaplace}} Log Hazard Function for a Skew Laplace
+#' Process
+#' 
+#' \code{\link[event]{hstudent}} Log Hazard Function for a Student Process
+#' 
+#' \code{\link[event]{hweibull}} Log Hazard Function for a Weibull Process
+#' 
+#' \code{\link[event]{ident}} Create an Individual Identification Vector for a
+#' Point Process
+#' 
+#' \code{\link[event]{kalsurv}} Generalized Repeated Measurements Models for
+#' Event Histories
+#' 
+#' \code{\link[event]{km}} Kaplan-Meier Survival Curves
+#' 
+#' \code{\link[event]{pbirth}} Fit Overdispersed Count Data as a Birth Process
+#' 
+#' \code{\link[event]{pp}} Create a Point Process Vector from Times between
+#' Events
+#' 
+#' \code{\link[event]{read.list}} Read a List of Matrices of Unbalanced
+#' Repeated Measurements from a File
+#' 
+#' \code{\link[event]{read.surv}} Read a List of Vectors of Event Histories
+#' from a File
+#' 
+#' \code{\link[event]{survkit}} Weibull and Cox Models with Random Effects
+#' 
+#' \code{\link[event]{tccov}} Create a Vector of Time-constant Covariates for a
+#' Point Process
+#' 
+#' \code{\link[event]{tpast}} Create a Vector of Times Past since Previous
+#' Events for a Point Process
+#' 
+#' \code{\link[event]{ttime}} Create a Vector of Total Time Elapsed for each
+#' Individual for a Point Process
+#' 
+#' \code{\link[event]{tvcov}} Create a Vector of Time-varying Covariates for a
+#' Point Process
+#' 
+#' 
+#' @keywords documentation
 	event <- c(event,rep(k,length(nint)))
 	if(fcov)ncov <- c(ncov,ncov1)
 	if(!stratified)resp <- c(resp,nresp)

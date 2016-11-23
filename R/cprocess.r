@@ -25,6 +25,37 @@
 #
 #    Plots counting process data
 
+
+
+
+
+
+
+
+
+#' Plot Counting Process Data
+#' 
+#' \code{cprocess} plots the cumulative number of events (the counting process)
+#' over time for each vector in the list. One or both of \code{times} and
+#' \code{events} can be supplied.
+#' 
+#' 
+#' @param times Vector of times between events, a list of such vectors, or a
+#' \code{repeated} object.
+#' @param events Vector of counts of events, a list of such vectors, or a
+#' \code{repeated} object.
+#' @param number If TRUE, the counting processes are numbered consecutively on
+#' the graph.
+#' @param others Plotting control options.
+#' @author J.K. Lindsey
+#' @seealso \code{\link[rmutil]{read.list}}, \code{\link[rmutil]{rmna}}.
+#' @keywords hplot
+#' @examples
+#' 
+#' times <- rgamma(20,2,scale=4)
+#' cprocess(times)
+#' 
+#' @export cprocess
 cprocess <- function(times=NULL, events=NULL, number=FALSE, lty=NULL,
 	xlim=NULL, ylim=NULL, xlab="Time", ylab="Counts", ...){
 if(is.null(times)&&is.null(events))
