@@ -1,0 +1,30 @@
+\name{hcauchy}
+\title{Hazard Function for a Cauchy Process}
+\alias{hcauchy}
+\usage{
+hcauchy(y, m, s)
+}
+\arguments{
+\item{y}{Vector of times.}
+\item{m}{Location parameter.}
+\item{s}{Dispersion parameter.}
+}
+\value{
+\code{hcauchy} returns the log hazard function for a Cauchy process with
+the given parameter values.
+}
+\author{J.K. Lindsey}
+\seealso{
+\code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
+\code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
+\code{\link[event]{hgamma}}, \code{\link[rmutil]{hggamma}},
+\code{\link[rmutil]{hhjorth}}, \code{\link[rmutil]{hinvgauss}},
+\code{\link[rmutil]{hlaplace}}, \code{\link[event]{hlnorm}},
+\code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
+\code{\link[event]{hnorm}}, \code{\link[event]{hstudent}},
+\code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
+}
+\examples{
+hcauchy(1:10, 3, 2)
+}
+\keyword{distribution}

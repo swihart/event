@@ -1,0 +1,29 @@
+\name{hexp}
+\title{Hazard Function for a Poisson Process}
+\alias{hexp}
+\usage{
+hexp(y, rate)
+}
+\arguments{
+\item{y}{Vector of times.}
+\item{rate}{Vector of rates.}
+}
+\value{
+\code{hexp} returns the log hazard function for a Poisson process with
+the given parameter value.
+}
+\author{J.K. Lindsey}
+\seealso{
+\code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
+\code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
+\code{\link[event]{hgamma}}, \code{\link[rmutil]{hggamma}},
+\code{\link[rmutil]{hhjorth}}, \code{\link[rmutil]{hinvgauss}},
+\code{\link[rmutil]{hlaplace}}, \code{\link[event]{hlnorm}},
+\code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
+\code{\link[event]{hnorm}}, \code{\link[event]{hstudent}},
+\code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
+}
+\examples{
+hexp(1:10, 3)
+}
+\keyword{distribution}
