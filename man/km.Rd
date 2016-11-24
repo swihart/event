@@ -8,7 +8,8 @@
 \alias{plot.km}
 \title{Kaplan-Meier Survivor Curves}
 \usage{
-km(times, censor = 1, group = 1, freq = 1, cdf = FALSE)
+\method{plot}{intensity}(times, censor = 1, group = 1, freq = 1,
+  cdf = FALSE)
 }
 \arguments{
 \item{times}{Vector of times to events or a list of vectors of such times

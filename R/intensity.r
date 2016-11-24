@@ -129,10 +129,10 @@ hcauchy <- function(y,m,s) log(dcauchy(y,m,s))-log(1-pcauchy(y,m,s))
 #' @export hexp
 hexp <- function(y,rate)
 	if(length(rate)==1)rep(log(rate),length(y)) else log(rate)
-
 ### generalized extreme value intensity
 ###
 # f=1 gives truncated extreme value
+#' @export hgextval
 hgextval <- function(y,s,m,f) {
 	y1 <- y^f/f
 	ey <-exp(y1)
@@ -175,7 +175,7 @@ hgextval <- function(y,s,m,f) {
 #' @export hgamma
 hgamma <- function(y,shape,rate=1,scale=1/rate)
 	dgamma(y,shape,scale=scale,log=TRUE)-
-		pgamma(y,shape,scale=scale,lower=FALSE,log=TRUE)
+		pgamma(y,shape,scale=scale,lower.tail=FALSE,log.p=TRUE)
 
 ### generalized gamma intensity
 ###

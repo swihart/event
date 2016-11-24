@@ -81,7 +81,8 @@
 #' plot.dist(km(surv, cens, group=treat))
 #' plot.intensity(km(surv, cens, group=treat),ylab="Risk of deterioration")
 #' 
-#' @export km
+#' @method plot intensity
+#' @export
 km <- function(times, censor=1, group=1, freq=1, cdf=FALSE){
 #
 # list supplied, make vectors
@@ -334,7 +335,7 @@ invisible(cbind(ttt,kms))}
 #' plot.intensity(km(surv, cens, group=treat),ylab="Risk of deterioration")
 #' 
 #' @export plot.intensity
-plot.intensity <- function(z, ...) UseMethod("plot.intensity")
+plot.intensity <- function(x, ...) UseMethod("plot.intensity")
 
 plot.intensity.default <- function(times, censor=1, group=1, colour=TRUE,
 	mix=1, ylim=c(0,1), ylab="p", xlab="Time",

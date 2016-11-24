@@ -2,3 +2,12 @@
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^README-.*\.png$
+^README_.*\.png$
+QEE2.out
+^\.travis\.yml$
+cran-comments.md
+changes.txt
+\.fsrc$
+^.*\.o$
+\.so$
+\.dll$

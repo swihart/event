@@ -30,9 +30,9 @@
 #
 #    Function to fit  Weibull and Cox models with frailties
 
-.First.lib <- function(lib, pkg)
-	library.dynam("event", pkg, lib)
-require(rmutil)
+# .First.lib <- function(lib, pkg)
+# 	library.dynam("event", pkg, lib)
+# require(rmutil)
 
 
 
@@ -543,7 +543,7 @@ z0 <- if(model=="Weibull")
 	surv=double(3*nstimax*nrr),
 	like=double(2),
 	df=integer(2),
-	DUP=FALSE,
+	#DUP=FALSE,
 	PACKAGE="event")
 else
 	.Fortran("cox",
@@ -584,7 +584,7 @@ else
 	km=double(nrr*nstrata*4),
 	resid=double(nrr*nstrata*3),
 	ut=as.integer(nrr*nstrata),
-	DUP=FALSE,
+	#DUP=FALSE,
 	PACKAGE="event")
 if(z0$iconst[1]>0)switch(as.character(z0$iconst[1]),
 	"1"=stop("too many error constraints"),

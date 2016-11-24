@@ -262,7 +262,7 @@ ksurvb <- function(p){
 		sf=as.integer(sf),
 		vv=as.double(v),
 		like=double(1),
-		DUP=FALSE,
+		#DUP=FALSE,
 		PACKAGE="event")
 	z$like}
 #
@@ -296,7 +296,7 @@ ksurvg <- function(p){
 		sf=as.integer(sf),
 		vv=as.double(v),
 		like=double(1),
-		DUP=FALSE,
+		#DUP=FALSE,
 		PACKAGE="event")
 	z$like}
 #
@@ -329,7 +329,7 @@ frailb <- function(p){
 		vv=as.double(v),
 		frser=as.integer(frser),
 		like=double(1),
-		DUP=FALSE,
+		#DUP=FALSE,
 		PACKAGE="event")
 	z$like}
 call <- sys.call()
@@ -572,7 +572,7 @@ if(inherits(shape,"formula")){
 	if(is.character(attr(sh2,"model"))){
 	# W&R formula
 		if(length(attr(sh2,"model"))==1){
-			sh1 <- function(p) p[npl1]*rep(1,n)
+		  sh1 <- function(p) p[ (nlp+1) ]*rep(1,n)
 			attributes(sh1) <- attributes(sh2)
 			sh2 <- NULL}}
 	else {
@@ -761,7 +761,7 @@ else {
 			vv=as.double(v),
 			frser=as.integer(frser),
 			like=double(1),
-			DUP=FALSE,
+			#DUP=FALSE,
 			PACKAGE="event")}
 	else if(distribution=="Pareto"){
 		if(rf)b <- mu1(p)
@@ -791,7 +791,7 @@ else {
 			sf=as.integer(sf),
 			vv=as.double(v),
 			like=double(1),
-			DUP=FALSE,
+			#DUP=FALSE,
 			PACKAGE="event")}
 	else {
 		if(rf)b <- mu1(p)
@@ -821,7 +821,7 @@ else {
 			sf=as.integer(sf),
 			vv=as.double(v),
 			like=double(1),
-			DUP=FALSE,
+			#DUP=FALSE,
 			PACKAGE="event")}
 	for(i in 1:n)if(resp$response$y[i]==0){
 		z$pred[i] <- z$pred[i-1]

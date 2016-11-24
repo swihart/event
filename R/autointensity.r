@@ -64,7 +64,12 @@
 #' times <- rgamma(100,2,scale=4)
 #' autointensity(times, window=3)
 #' 
-#' @export autointensity
+#' @importFrom grDevices gray
+#' @importFrom graphics hist lines par plot text
+#' @importFrom stats dcauchy dgamma dlnorm dlogis dnorm glm model.frame na.fail nlm pbeta pcauchy pgamma plnorm plogis pnorm poisson pweibull qnorm terms
+#' @useDynLib event
+#' @import rmutil
+#' @export
 autointensity <- function(times, window=NULL, maxlag=max(times),
 	ylab="Conditional probability", xlab="Lag",
 	main="Autointensity function", xlim=c(0,max(times)),

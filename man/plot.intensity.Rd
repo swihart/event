@@ -4,7 +4,7 @@
 \alias{plot.intensity}
 \title{Plot Intensity Functions}
 \usage{
-plot.intensity(z, ...)
+plot.intensity(x, ...)
 }
 \arguments{
 \item{times}{Vector of times to events or a list of vectors of such times
