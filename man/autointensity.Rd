@@ -7,6 +7,7 @@ autointensity(times, window=NULL, maxlag=total/10,
 	ylim=c(0,if(plotse)max(se1)else max(z$density)),
 	lty=1, plot=TRUE, plotse=TRUE, add=FALSE, ...)
 }
+\alias{autointensity}
 \description{
 \code{autointensity} plots the autointensity function of a point
 process, including a solid horizontal line indicating the constant
@@ -22,7 +23,13 @@ plotted.}
 \item{plotse}{If TRUE, plots pointwise two-standard error bands around
 the curve.}
 \item{add}{If TRUE, add curve to an existing plot.}
-\item{others}{Plotting control options.}
+\item{ylab}{Plotting control options.}
+\item{xlab}{Plotting control options.}
+\item{main}{Plotting control options.}
+\item{xlim}{Plotting control options.}
+\item{ylim}{Plotting control options.}
+\item{lty}{Plotting control options.}
+\item{...}{Plotting control options.}
 }
 \value{
 A list containing the coordinates of the plotted function and the
