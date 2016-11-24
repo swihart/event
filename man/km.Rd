@@ -2,11 +2,9 @@
 \title{Kaplan-Meier Survivor Curves}
 \usage{
 km(times, censor, group=1, freq=1, cdf=FALSE)
-plot.km(z, add=FALSE, xlim, ylim=c(0,1), main=NULL, xlab="Time",
-	ylab=NULL, lty=NULL, ...)
-plot.intensity.km(z, add=FALSE, xlab="Time", ylab="Intensity", type="l",
-	lty=NULL, ...)
-plot.dist.km(z)
+\method{plot}{km}(z, add=FALSE, xlim, ylim=c(0,1), main=NULL, xlab="Time", ylab=NULL, lty=NULL, ...)
+\method{plot.intensity}{km}(z, add=FALSE, xlab="Time", ylab="Intensity", type="l", lty=NULL, ...)
+\method{plot.dist}{km}(z)
 }
 \alias{km}
 \alias{plot.km}

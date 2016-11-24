@@ -2,8 +2,8 @@
 \title{Plot Intensity Functions}
 \alias{plot.intensity}
 \usage{
-plot.intensity(z, ...)
-plot.intensity.default(times, censor=1, group=1, colour=TRUE, mix=1,
+\method{plot}{intensity}(z, ...)
+\method{plot.intensity}{default}(times, censor=1, group=1, colour=TRUE, mix=1,
 	ylim=c(0,1), ylab="p", xlab="Time",
 	main="Empirical Intensity Function(s)")
 }
