@@ -28,48 +28,6 @@
 #
 #    Plots the autointensity function of a point process
 
-
-
-
-
-
-
-
-
-#' Plot Autointensity Function of a Point Process
-#' 
-#' \code{autointensity} plots the autointensity function of a point process,
-#' including a solid horizontal line indicating the constant intensity of a
-#' Poisson process.
-#' 
-#' 
-#' @param times Vector of times between events.
-#' @param window Width of grouping interval.
-#' @param maxlag Maximum lag to be calculated, by default the maximum
-#' interevent time.
-#' @param plot If FALSE, values are returned but the function is not plotted.
-#' @param plotse If TRUE, plots pointwise two-standard error bands around the
-#' curve.
-#' @param add If TRUE, add curve to an existing plot.
-#' @param others Plotting control options.
-#' @return A list containing the coordinates of the plotted function and the
-#' standard error bands.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[event]{cprocess}}.
-#' @references Guttorp, P. (1995) Stochastic Modeling of Scientific Data.
-#' Chapman & Hall, pp. 229, 238-240.
-#' @keywords hplot
-#' @examples
-#' 
-#' times <- rgamma(100,2,scale=4)
-#' autointensity(times, window=3)
-#' 
-#' @importFrom grDevices gray
-#' @importFrom graphics hist lines par plot text
-#' @importFrom stats dcauchy dgamma dlnorm dlogis dnorm glm model.frame na.fail nlm pbeta pcauchy pgamma plnorm plogis pnorm poisson pweibull qnorm terms
-#' @useDynLib event
-#' @import rmutil
-#' @export
 autointensity <- function(times, window=NULL, maxlag=max(times),
 	ylab="Conditional probability", xlab="Lag",
 	main="Autointensity function", xlim=c(0,max(times)),

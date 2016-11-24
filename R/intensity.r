@@ -60,79 +60,16 @@ hburr <- function(y,m,s,f) {
 
 ### Cauchy intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Cauchy Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param m Location parameter.
-#' @param s Dispersion parameter.
-#' @return \code{hcauchy} returns the log hazard function for a Cauchy process
-#' with the given parameter values.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
-#' \code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
-#' \code{\link[event]{hgamma}}, \code{\link[rmutil]{hggamma}},
-#' \code{\link[rmutil]{hhjorth}}, \code{\link[rmutil]{hinvgauss}},
-#' \code{\link[rmutil]{hlaplace}}, \code{\link[event]{hlnorm}},
-#' \code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
-#' \code{\link[event]{hnorm}}, \code{\link[event]{hstudent}},
-#' \code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hcauchy(1:10, 3, 2)
-#' 
-#' @export hcauchy
 hcauchy <- function(y,m,s) log(dcauchy(y,m,s))-log(1-pcauchy(y,m,s))
 
 ### exponential intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Poisson Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param rate Vector of rates.
-#' @return \code{hexp} returns the log hazard function for a Poisson process
-#' with the given parameter value.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
-#' \code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
-#' \code{\link[event]{hgamma}}, \code{\link[rmutil]{hggamma}},
-#' \code{\link[rmutil]{hhjorth}}, \code{\link[rmutil]{hinvgauss}},
-#' \code{\link[rmutil]{hlaplace}}, \code{\link[event]{hlnorm}},
-#' \code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
-#' \code{\link[event]{hnorm}}, \code{\link[event]{hstudent}},
-#' \code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hexp(1:10, 3)
-#' 
-#' @export hexp
 hexp <- function(y,rate)
 	if(length(rate)==1)rep(log(rate),length(y)) else log(rate)
+
 ### generalized extreme value intensity
 ###
 # f=1 gives truncated extreme value
-#' @export hgextval
 hgextval <- function(y,s,m,f) {
 	y1 <- y^f/f
 	ey <-exp(y1)
@@ -140,42 +77,9 @@ hgextval <- function(y,s,m,f) {
 
 ### gamma intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Gamma Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param shape Shape parameter.
-#' @param rate Rate parameter.
-#' @param scale Scale parameter.
-#' @return \code{hgamma} returns the log hazard function for a gamma process
-#' with the given parameter values.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
-#' \code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
-#' \code{\link[event]{hcauchy}}, \code{\link[rmutil]{hggamma}},
-#' \code{\link[rmutil]{hhjorth}}, \code{\link[rmutil]{hinvgauss}},
-#' \code{\link[rmutil]{hlaplace}}, \code{\link[event]{hlnorm}},
-#' \code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
-#' \code{\link[event]{hnorm}}, \code{\link[event]{hstudent}},
-#' \code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hgamma(1:10, 3, 2)
-#' 
-#' @export hgamma
 hgamma <- function(y,shape,rate=1,scale=1/rate)
 	dgamma(y,shape,scale=scale,log=TRUE)-
-		pgamma(y,shape,scale=scale,lower.tail=FALSE,log.p=TRUE)
+		pgamma(y,shape,scale=scale,lower=FALSE,log=TRUE)
 
 ### generalized gamma intensity
 ###
@@ -208,72 +112,10 @@ hlaplace <- function(y,m=0,s=1){
 
 ### log normal intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Log Normal Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param m Mean parameter.
-#' @param s Variance parameter.
-#' @return \code{hlnorm} returns the log hazard function for a log normal
-#' process with the given parameter values.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
-#' \code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
-#' \code{\link[event]{hcauchy}}, \code{\link[event]{hgamma}},
-#' \code{\link[rmutil]{hggamma}}, \code{\link[rmutil]{hhjorth}},
-#' \code{\link[rmutil]{hinvgauss}}, \code{\link[rmutil]{hlaplace}},
-#' \code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
-#' \code{\link[event]{hnorm}}, \code{\link[event]{hstudent}},
-#' \code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hlnorm(1:10, 3, 2)
-#' 
-#' @export hlnorm
 hlnorm <- function(y,m,s) dlnorm(y,m,s,TRUE)-plnorm(y,m,s,FALSE,TRUE)
 
 ### logistic intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Logistic Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param m Location parameter.
-#' @param s Scale parameter.
-#' @return \code{hlogis} returns the log hazard function for a logistic process
-#' with the given parameter values.
-#' @author J.K. Lindsey
-#' @seealso \code{\link{hboxcox}}, \code{\link{hburr}}, \code{\link{hexp}},
-#' \code{\link{hgextval}}, \code{\link{hcauchy}}, \code{\link{hgamma}},
-#' \code{\link{hggamma}}, \code{\link{hhjorth}}, \code{\link{hinvgauss}},
-#' \code{\link{hlaplace}}, \code{\link{hlnorm}}, \code{\link{hglogis}},
-#' \code{\link{hnorm}}, \code{\link{hstudent}}, \code{\link{hweibull}},
-#' \code{\link{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hlogis(1:10, 3, 2)
-#' 
-#' @export hlogis
 hlogis <- function(y,m,s) dlogis(y,m,s,TRUE)-plogis(y,m,s,FALSE,TRUE)
 
 ### generalized logistic intensity
@@ -286,38 +128,6 @@ hglogis <- function(y,m,s,f) {
 
 ### normal intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Normal Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param m Mean parameter.
-#' @param s Variance parameter.
-#' @return \code{hnorm} returns the log hazard function for a normal process
-#' with the given parameter values.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
-#' \code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
-#' \code{\link[event]{hcauchy}}, \code{\link[event]{hgamma}},
-#' \code{\link[rmutil]{hggamma}}, \code{\link[rmutil]{hhjorth}},
-#' \code{\link[rmutil]{hinvgauss}}, \code{\link[rmutil]{hlaplace}},
-#' \code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
-#' \code{\link[event]{hlnorm}}, \code{\link[event]{hstudent}},
-#' \code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hnorm(1:10, 3, 2)
-#' 
-#' @export hnorm
 hnorm <- function(y,m,s) dnorm(y,m,s,TRUE)-pnorm(y,m,s,FALSE,TRUE)
 
 ### Pareto intensity
@@ -326,39 +136,6 @@ hpareto <- function(y,m,s) (s+1)/(m*s+y)
 
 ### Student t intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Student t Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param m Location parameter.
-#' @param s Scale parameter.
-#' @param f Degrees of freedom.
-#' @return \code{hstudent} returns the log hazard function for a Student t
-#' process with the given parameter values.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
-#' \code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
-#' \code{\link[event]{hcauchy}}, \code{\link[event]{hgamma}},
-#' \code{\link[rmutil]{hggamma}}, \code{\link[rmutil]{hhjorth}},
-#' \code{\link[rmutil]{hinvgauss}}, \code{\link[rmutil]{hlaplace}},
-#' \code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
-#' \code{\link[event]{hnorm}}, \code{\link[event]{hnorm}},
-#' \code{\link[event]{hweibull}}, \code{\link[rmutil]{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hstudent(1:10, 3, 2, 5)
-#' 
-#' @export hstudent
 hstudent <- function(y,m,s,f){
 	pst <- function(u,f){
 		t <- 0.5*pbeta(f/(f+u^2),f/2,0.5)
@@ -369,38 +146,6 @@ hstudent <- function(y,m,s,f){
 		-log(pi)/2-log(1-pst(u,f))}
 ### Weibull intensity
 ###
-
-
-
-
-
-
-
-
-#' Hazard Function for a Weibull Process
-#' 
-#' 
-#' 
-#' @param y Vector of times.
-#' @param s Shape parameter.
-#' @param m Scale parameter.
-#' @return \code{hweibull} returns the log hazard function for a Weibull
-#' process with the given parameter values.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[rmutil]{hboxcox}}, \code{\link[rmutil]{hburr}},
-#' \code{\link[event]{hexp}}, \code{\link[rmutil]{hgextval}},
-#' \code{\link[event]{hcauchy}}, \code{\link[event]{hgamma}},
-#' \code{\link[rmutil]{hggamma}}, \code{\link[rmutil]{hhjorth}},
-#' \code{\link[rmutil]{hinvgauss}}, \code{\link[rmutil]{hlaplace}},
-#' \code{\link[event]{hlogis}}, \code{\link[rmutil]{hglogis}},
-#' \code{\link[event]{hlnorm}}, \code{\link[event]{hnorm}},
-#' \code{\link[event]{hstudent}}, \code{\link[rmutil]{hgweibull}}.
-#' @keywords distribution
-#' @examples
-#' 
-#' hweibull(1:10, 1.5, 2)
-#' 
-#' @export hweibull
 hweibull <- function(y,s,m) log(s)+(s-1)*log(y)-s*log(m)
 
 ### generalized Weibull intensity

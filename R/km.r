@@ -39,50 +39,6 @@
 
 ### function to compute Kaplan-Meier estimates
 ###
-
-
-
-
-
-
-
-
-#' Kaplan-Meier Survivor Curves
-#' 
-#' \code{km} calculates the Kaplan-Meier estimates for survival.
-#' 
-#' To plot the survivor curve, use \code{plot()}; for the empirical intensity
-#' curve, use \code{plot.intensity()}; for diagnostic curves to choose a
-#' distribution to which the data might belong, use \code{plot.dist()}.
-#' 
-#' 
-#' @aliases km plot.km plot.intensity.km plot.dist plot.dist.km
-#' @param times Vector of times to events or a list of vectors of such times
-#' for different individuals.
-#' @param censor Vector of censoring indicators corresponding to the vector of
-#' times or to the last time in each vector of a list.
-#' @param group Vector indicating to which group each individual belongs.
-#' @param freq Vector of frequencies for grouped data.
-#' @param cdf If TRUE, calculate the cdf instead of the survivor curve.
-#' @param z An object produced by \code{km}.
-#' @return A matrix with class, \code{km}, containing the Kaplan-Meier
-#' estimates is returned.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[event]{plot.intensity}},
-#' \code{\link[event]{plot.survivor}}
-#' @keywords hplot
-#' @examples
-#' 
-#' surv <- rgamma(40,2,scale=5)
-#' cens <- rbinom(40,1,0.9)
-#' treat <- gl(2,20)
-#' plot(km(surv, cens, group=treat), main="",xlab="Months",
-#' 	ylab="Probability of deterioration")
-#' plot.dist(km(surv, cens, group=treat))
-#' plot.intensity(km(surv, cens, group=treat),ylab="Risk of deterioration")
-#' 
-#' @method plot intensity
-#' @export
 km <- function(times, censor=1, group=1, freq=1, cdf=FALSE){
 #
 # list supplied, make vectors
@@ -302,40 +258,7 @@ invisible(cbind(ttt,kms))}
 
 ### functions to plot intensity function
 ###
-
-
-
-
-
-
-
-
-#' Plot Intensity Functions
-#' 
-#' Plot the empirical intensity curve for given times between events.
-#' 
-#' 
-#' @param times Vector of times to events or a list of vectors of such times
-#' for different individuals.
-#' @param censor Vector of censoring indicators corresponding to the vector of
-#' times or to the last time in each vector of a list.
-#' @param group Vector indicating to which group each individual belongs.
-#' @param colour Use a different colour for each curve.
-#' @author J.K. Lindsey
-#' @seealso \code{\link[event]{km}}, \code{\link[event]{plot.survivor}}
-#' @keywords hplot
-#' @examples
-#' 
-#' surv <- rgamma(40,2,scale=5)
-#' cens <- rbinom(40,1,0.9)
-#' treat <- gl(2,20)
-#' plot(km(surv, cens, group=treat), main="",xlab="Months",
-#' 	ylab="Probability of deterioration")
-#' plot.dist(km(surv, cens, group=treat))
-#' plot.intensity(km(surv, cens, group=treat),ylab="Risk of deterioration")
-#' 
-#' @export plot.intensity
-plot.intensity <- function(x, ...) UseMethod("plot.intensity")
+plot.intensity <- function(z, ...) UseMethod("plot.intensity")
 
 plot.intensity.default <- function(times, censor=1, group=1, colour=TRUE,
 	mix=1, ylim=c(0,1), ylab="p", xlab="Time",
