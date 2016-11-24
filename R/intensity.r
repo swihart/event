@@ -79,7 +79,7 @@ hgextval <- function(y,s,m,f) {
 ###
 hgamma <- function(y,shape,rate=1,scale=1/rate)
 	dgamma(y,shape,scale=scale,log=TRUE)-
-		pgamma(y,shape,scale=scale,lower=FALSE,log=TRUE)
+		pgamma(y,shape,scale=scale,lower.tail=FALSE,log.p=TRUE)
 
 ### generalized gamma intensity
 ###
