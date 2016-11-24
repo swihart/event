@@ -2,6 +2,7 @@
 
 export(autointensity)
 export(bp)
+export(coxre)
 export(cprocess)
 export(ehr)
 export(hcauchy)

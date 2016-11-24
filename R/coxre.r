@@ -63,6 +63,7 @@
 #' @param estimate Initial estimate of the frailty parameter.
 #' @param iter Maximum number of iterations allowed for the inner EM loop.
 #' @param others Plotting control options.
+#' @export coxre
 #' @author D.G. Clayton and J.K. Lindsey
 #' @seealso \code{\link[event]{kalsurv}}.
 #' @references Clayton, D. (1987) The analysis of event history data: a review
@@ -91,8 +92,7 @@
 #' # Identical intensity functions
 #' coxre(response=as.vector(t(y)), censor=rep(1,55),
 #' 	nest=rep(1:11,rep(5,11)), est=0.7)
-#' 
-#' @export coxre
+#' 	
 coxre <- function(response, censor, nest=NULL, cov=NULL, stratified=FALSE,
 	cumul=FALSE,estimate=1, iter=10, print.level=0, ndigit=10,
 	gradtol=0.00001, steptol=0.00001, iterlim=100, fscale=1,
