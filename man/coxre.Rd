@@ -30,7 +30,14 @@ If NULL all values are set to one.}
 instead of times to (or between) events.}
 \item{estimate}{Initial estimate of the frailty parameter.}
 \item{iter}{Maximum number of iterations allowed for the inner EM loop.}
-\item{others}{Plotting control options.}
+\item{print.level}{\code{nlm} control options.}
+\item{ndigit}{\code{nlm} control options.}
+\item{gradtol}{\code{nlm} control options.}
+\item{steptol}{\code{nlm} control options.}
+\item{iterlim}{\code{nlm} control options.}
+\item{fscale}{\code{nlm} control options.}
+\item{typsiz}{\code{nlm} control options.}
+\item{stepmax}{\code{nlm} control options.}
 }
 \author{D.G. Clayton and J.K. Lindsey}
 \references{
