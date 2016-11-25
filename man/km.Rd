@@ -3,7 +3,7 @@
 \usage{
 km(times, censor, group=1, freq=1, cdf=FALSE)
 \method{plot}{km}(z, add=FALSE, xlim, ylim=c(0,1), main=NULL, xlab="Time", ylab=NULL, lty=NULL, ...)
-\method{plot.intensity}{km}(z, add=FALSE, xlab="Time", ylab="Intensity", type="l", lty=NULL, ...)
+\method{plot.intensity}{km}(z, add=FALSE, xlab="Time", ylab="Hazard", type="l", lty=NULL, ...)
 \method{plot.dist}{km}(z)
 }
 \alias{km}

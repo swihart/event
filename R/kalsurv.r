@@ -18,7 +18,7 @@
 #
 #  SYNOPSIS
 #
-#  kalsurv(response=NULL, intensity="exponential", distribution="Pareto",
+#  kalsurv(response, intensity="exponential", distribution="Pareto",
 #	depend="independence", update="Markov", mu=NULL, shape=NULL,
 #	renewal=TRUE, density=FALSE, censor=NULL, delta=NULL, ccov=NULL,
 #	tvcov=NULL,preg=NULL, ptvc=NULL, pbirth=NULL, pintercept=NULL,
@@ -33,7 +33,7 @@
 # Weibull distribution with serial dependence or gamma frailties using
 # Kalman-type update for event histories.
 
-kalsurv <- function(response=NULL, intensity="exponential",
+kalsurv <- function(response, intensity="exponential",
 	distribution="Pareto", depend="independence", update="Markov",
 	mu=NULL, shape=NULL, renewal=TRUE, density=FALSE, censor=NULL,
 	delta=NULL, ccov=NULL, tvcov=NULL, preg=NULL, ptvc=NULL, pbirth=NULL,

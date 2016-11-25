@@ -6,7 +6,7 @@
 \method{plot}{intensity}(z, ...)
 \method{plot.intensity}{default}(times, censor=1, group=1, colour=TRUE, mix=1,
 	ylim=c(0,1), ylab="p", xlab="Time",
-	main="Empirical Intensity Function(s)")
+	main="Empirical Hazard Function(s)")
 }
 \description{
 Plot the empirical intensity curve for given times between events.

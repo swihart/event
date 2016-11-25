@@ -3,7 +3,7 @@
 \alias{ehr}
 \usage{
 ehr(point, lambda=NULL, linear=NULL, plambda=NULL, delta=1,
-	envir=parent.frame(), print.level=0, typsiz=rep(1,length(plambda)),
+	envir=parent.frame(), print.level=0, typsize=rep(1,length(plambda)),
 	ndigit=10, gradtol=0.00001, iterlim=100, fscale=1,
 	stepmax=max(10*sqrt(plambda\%*\%plambda),10), steptol=0.0004)
 }
@@ -43,7 +43,7 @@ environment.}
 \item{steptol}{\code{nlm} control options.}
 \item{iterlim}{\code{nlm} control options.}
 \item{fscale}{\code{nlm} control options.}
-\item{typsiz}{\code{nlm} control options.}
+\item{typsize}{\code{nlm} control options.}
 \item{stepmax}{\code{nlm} control options.}
 }
 \references{

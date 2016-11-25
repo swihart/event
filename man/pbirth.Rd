@@ -5,7 +5,7 @@
 pbirth(frequencies, p, intensity="negative binomial",
 	type="spectral decomposition", print.level=0, ndigit=10,
 	gradtol=0.00001, steptol=0.00001, fscale=1, iterlim=100,
-	typsiz=abs(p), stepmax=10*sqrt(p\%*\%p))
+	typsize=abs(p), stepmax=10*sqrt(p\%*\%p))
 }
 \description{
 \code{pbirth} fits binomial, binomial exponential, binomial logistic,
@@ -29,7 +29,7 @@ decomposition or series approximation.}
 \item{steptol}{\code{nlm} control options.}
 \item{iterlim}{\code{nlm} control options.}
 \item{fscale}{\code{nlm} control options.}
-\item{typsiz}{\code{nlm} control options.}
+\item{typsize}{\code{nlm} control options.}
 \item{stepmax}{\code{nlm} control options.}
 }
 \references{

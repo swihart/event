@@ -5,7 +5,7 @@
 coxre(response, censor, nest=NULL, cov=NULL, stratified=FALSE,
 	cumul=FALSE,estimate=1, iter=10, print.level=0, ndigit=10,
 	gradtol=0.00001, steptol=0.00001, iterlim=100, fscale=1,
-	typsiz=abs(estimate), stepmax=estimate)
+	typsize=abs(estimate), stepmax=estimate)
 }
 \description{
 \code{coxre} fits a Cox proportional hazards model to event history
@@ -36,7 +36,7 @@ instead of times to (or between) events.}
 \item{steptol}{\code{nlm} control options.}
 \item{iterlim}{\code{nlm} control options.}
 \item{fscale}{\code{nlm} control options.}
-\item{typsiz}{\code{nlm} control options.}
+\item{typsize}{\code{nlm} control options.}
 \item{stepmax}{\code{nlm} control options.}
 }
 \author{D.G. Clayton and J.K. Lindsey}

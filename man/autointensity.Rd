@@ -1,7 +1,7 @@
 \name{autointensity}
 \title{Plot Autointensity Function of a Point Process}
 \usage{
-autointensity(times, window=NULL, maxlag=total/10,
+autointensity(times, window=NULL, maxlag=max(times),
 	ylab="Conditional probability", xlab="Lag",
 	main="Autointensity function", xlim=c(0,max(times)),
 	ylim=c(0,if(plotse)max(se1)else max(z$density)),

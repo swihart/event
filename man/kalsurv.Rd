@@ -5,11 +5,11 @@
 kalsurv(response, intensity="exponential", distribution="Pareto",
 	depend="independence", update="Markov", mu=NULL, shape=NULL,
 	renewal=TRUE, density=FALSE, censor=NULL, delta=NULL, ccov=NULL,
-	tvcov=NULL, preg=1, ptvc=NULL, pbirth=NULL,
+	tvcov=NULL, preg=NULL, ptvc=NULL, pbirth=NULL,
 	pintercept=NULL, pshape=NULL, pinitial=1, pdepend=NULL,
 	pfamily=NULL, envir=parent.frame(), print.level=0,
 	ndigit=10, gradtol=0.00001, steptol=0.00001, iterlim=100,
-	fscale=1, typsiz=abs(p), stepmax=10*sqrt(p\%*\%p))
+	fscale=1, typsize=abs(p), stepmax=10*sqrt(p\%*\%p))
 }
 \description{
 \code{kalsurv} is designed to handle event history models with
@@ -147,7 +147,7 @@ environment.}
 \item{steptol}{\code{nlm} control options.}
 \item{iterlim}{\code{nlm} control options.}
 \item{fscale}{\code{nlm} control options.}
-\item{typsiz}{\code{nlm} control options.}
+\item{typsize}{\code{nlm} control options.}
 \item{stepmax}{\code{nlm} control options.}
 }
 \value{
