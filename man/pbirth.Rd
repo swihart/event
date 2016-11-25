@@ -1,6 +1,8 @@
 \name{pbirth}
 \title{Fit Overdispersed Count Data as a Birth Process}
 \alias{pbirth}
+\alias{deviance.pbirth}
+\alias{print.pbirth}
 \usage{
 pbirth(frequencies, p, intensity="negative binomial",
 	type="spectral decomposition", print.level=0, ndigit=10,

@@ -1,6 +1,10 @@
 \name{kalsurv}
 \title{Repeated Events Models with Frailty or Serial Dependence}
 \alias{kalsurv}
+\alias{deviance.kalsurv}
+\alias{fitted.kalsurv}
+\alias{print.kalsurv}
+\alias{residuals.kalsurv}
 \usage{
 kalsurv(response, intensity="exponential", distribution="Pareto",
 	depend="independence", update="Markov", mu=NULL, shape=NULL,

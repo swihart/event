@@ -1,6 +1,7 @@
 \name{coxre}
 \title{Cox Proportional Hazards Model with Random Effect}
 \alias{coxre}
+\alias{print.llrf}
 \usage{
 coxre(response, censor, nest=NULL, cov=NULL, stratified=FALSE,
 	cumul=FALSE,estimate=1, iter=10, print.level=0, ndigit=10,

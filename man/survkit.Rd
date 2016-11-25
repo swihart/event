@@ -1,6 +1,12 @@
 \name{survkit}
 \title{Weibull and Cox Models with Random Effects}
 \alias{survkit}
+\alias{baseline}
+\alias{baseline.survivalkit}
+\alias{print.survivalkit}
+\alias{residuals.survivalkit}
+\alias{survival}
+\alias{survival.survivalkit}
 \usage{
 survkit(times, censor=NULL, ccov=NULL, tvcov=NULL,
 	strata=NULL, id=NULL, model="Weibull", baseline=FALSE,

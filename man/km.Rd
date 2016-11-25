@@ -7,7 +7,9 @@ km(times, censor, group=1, freq=1, cdf=FALSE)
 \method{plot.dist}{km}(z)
 }
 \alias{km}
+\alias{plot.surv}
 \alias{plot.km}
+\alias{print.km}
 \alias{plot.intensity.km}
 \alias{plot.dist}
 \alias{plot.dist.km}

@@ -1,6 +1,9 @@
 \name{ehr}
 \title{Regression Models for Event History Intensity Functions}
 \alias{ehr}
+\alias{print.intensity}
+\alias{deviance.intensity}
+\alias{vdm}
 \usage{
 ehr(point, lambda=NULL, linear=NULL, plambda=NULL, delta=1,
 	envir=parent.frame(), print.level=0, typsize=rep(1,length(plambda)),
