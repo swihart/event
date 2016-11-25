@@ -17,7 +17,12 @@ vectors, or a \code{repeated} object.}
 \code{repeated} object.}
 \item{number}{If TRUE, the counting processes are numbered
 consecutively on the graph.}
-\item{others}{Plotting control options.}
+\item{ylab}{Plotting control options.}
+\item{xlab}{Plotting control options.}
+\item{xlim}{Plotting control options.}
+\item{ylim}{Plotting control options.}
+\item{lty}{Plotting control options.}
+\item{...}{Plotting control options.}
 }
 \author{J.K. Lindsey}
 \seealso{

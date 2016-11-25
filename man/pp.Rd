@@ -6,7 +6,7 @@ pp(y, censor=1)
 }
 \arguments{
 \item{y}{Vector of times.}
-\item{cens}{Vector of censoring indicators.}
+\item{censor}{Vector of censoring indicators.}
 }
 \value{
 \code{pp} creates a vector of length \code{sum(y)} of zeroes with a one

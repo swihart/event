@@ -23,7 +23,14 @@ Poisson, Poisson exponential, negative binomial, or gen(eralized)
 negative binomial.}
 \item{type}{Algorithm used for matrix exponentiation: spectral
 decomposition or series approximation.}
-\item{others}{Arguments controlling \code{\link{nlm}}.}
+\item{print.level}{\code{nlm} control options.}
+\item{ndigit}{\code{nlm} control options.}
+\item{gradtol}{\code{nlm} control options.}
+\item{steptol}{\code{nlm} control options.}
+\item{iterlim}{\code{nlm} control options.}
+\item{fscale}{\code{nlm} control options.}
+\item{typsiz}{\code{nlm} control options.}
+\item{stepmax}{\code{nlm} control options.}
 }
 \references{
 Faddy, M.J. and Fenlon, J.S. (1999) Stochastic modelling of the

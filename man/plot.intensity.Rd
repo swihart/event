@@ -1,6 +1,7 @@
 \name{plot.intensity}
 \title{Plot Intensity Functions}
 \alias{plot.intensity}
+\alias{plot.intensity.default}
 \usage{
 \method{plot}{intensity}(z, ...)
 \method{plot.intensity}{default}(times, censor=1, group=1, colour=TRUE, mix=1,
@@ -18,6 +19,13 @@ vector of times or to the last time in each vector of a list.}
 \item{group}{Vector indicating to which group each individual
 belongs.}
 \item{colour}{Use a different colour for each curve.}
+\item{z}{An object produced by \code{km}.}
+\item{mix}{...}
+\item{main}{Plotting control options.}
+\item{ylab}{Plotting control options.}
+\item{xlab}{Plotting control options.}
+\item{ylim}{Plotting control options.}
+\item{...}{Plotting control options.}
 }
 \author{J.K. Lindsey}
 \seealso{

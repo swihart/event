@@ -141,7 +141,14 @@ or \code{tvcov}; the name of the response variable should be given in
 \code{response}.
 If \code{response} has class \code{repeated}, it is used as the
 environment.}
-\item{others}{Arguments controlling \code{\link{nlm}}.}
+\item{print.level}{\code{nlm} control options.}
+\item{ndigit}{\code{nlm} control options.}
+\item{gradtol}{\code{nlm} control options.}
+\item{steptol}{\code{nlm} control options.}
+\item{iterlim}{\code{nlm} control options.}
+\item{fscale}{\code{nlm} control options.}
+\item{typsiz}{\code{nlm} control options.}
+\item{stepmax}{\code{nlm} control options.}
 }
 \value{
 A list of classes \code{kalsurv} and \code{recursive} is returned.

@@ -27,6 +27,15 @@ vector of times or to the last time in each vector of a list.}
 \item{freq}{Vector of frequencies for grouped data.}
 \item{cdf}{If TRUE, calculate the cdf instead of the survivor curve.}
 \item{z}{An object produced by \code{km}.}
+\item{add}{Plotting control options.}
+\item{main}{Plotting control options.}
+\item{type}{Plotting control options.}
+\item{ylab}{Plotting control options.}
+\item{xlab}{Plotting control options.}
+\item{xlim}{Plotting control options.}
+\item{ylim}{Plotting control options.}
+\item{lty}{Plotting control options.}
+\item{...}{Plotting control options.}
 }
 \value{
 A matrix with class, \code{km}, containing the Kaplan-Meier estimates
