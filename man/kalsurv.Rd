@@ -159,12 +159,17 @@ A list of classes \code{kalsurv} and \code{recursive} is returned.
 }
 \author{J.K. Lindsey}
 \seealso{
-\code{\link[event]{coxre}}, \code{\link[rmutil]{finterp}},
-\code{\link[rmutil]{gettvc}}, \code{\link[repeated]{gnlmm}},
-\code{\link[gnlm]{gnlr}}, \code{\link[rmutil]{iprofile}},
-\code{\link[repeated]{kalcount}}, \code{\link[repeated]{kalseries}},
-\code{\link[rmutil]{mprofile}}, \code{\link[repeated]{nbkal}},
-\code{\link[rmutil]{read.list}}, \code{\link[rmutil]{restovec}},
+\code{\link[event]{coxre}}, 
+\code{\link[rmutil]{finterp}},
+\code{\link[rmutil]{gettvc}}, 
+%\code{\link[repeated]{gnlmm}},
+%\code{\link[gnlm]{gnlr}}, 
+\code{\link[rmutil]{iprofile}},
+%\code{\link[repeated]{kalcount}}, \code{\link[repeated]{kalseries}},
+\code{\link[rmutil]{mprofile}}, 
+%\code{\link[repeated]{nbkal}},
+\code{\link[rmutil]{read.list}}, 
+\code{\link[rmutil]{restovec}},
 \code{\link[rmutil]{rmna}}, \code{\link[rmutil]{tcctomat}},
 \code{\link[rmutil]{tvctomat}}.
 }

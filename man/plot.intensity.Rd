@@ -29,7 +29,7 @@ belongs.}
 }
 \author{J.K. Lindsey}
 \seealso{
-\code{\link[event]{km}}, \code{\link[event]{plot.survivor}}
+\code{\link[event]{km}}, \code{\link[event]{plot.surv}}
 }
 \examples{
 surv <- rgamma(40,2,scale=5)

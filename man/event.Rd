@@ -60,9 +60,9 @@
 
 \code{\link[event]{pp}}			Create a Point Process Vector from Times between Events
 
-\code{\link[event]{read.list}}	Read a List of Matrices of Unbalanced Repeated Measurements from a File
+\code{\link[rmutil]{read.list}}	Read a List of Matrices of Unbalanced Repeated Measurements from a File
 
-\code{\link[event]{read.surv}}	Read a List of Vectors of Event Histories from a File
+\code{\link[rmutil]{read.surv}}	Read a List of Vectors of Event Histories from a File
 
 \code{\link[event]{survkit}}		Weibull and Cox Models with Random Effects
 
