@@ -619,13 +619,14 @@ z}
 
 ### standard methods
 ###
-residuals.survivalkit <- function(z){
-if(inherits(z,"Cox")){
-	if(!is.null(z$residuals))print(z$residuals)
+residuals.survivalkit <- function(object, ...){
+if(inherits(object,"Cox")){
+	if(!is.null(object$residuals))print(object$residuals)
 	else print("residuals not available: use residuals=TRUE")}
 else print("residuals only available for Cox model")}
 
-print.survivalkit <- function(z){
+print.survivalkit <- function(x, ...){
+  z <- x ## legacy / S3methods consistency
 if(inherits(z,"Kaplan.Meier")){
 	cat("\nKaplan-Meier estimates with 95% interval and Nelson estimates\n\n")
 	u <- log(z$km[,1])
@@ -727,6 +728,6 @@ else print("baseline only available for Cox model")}
 
 survival <- function(z, ...) UseMethod("survival")
 
-survival.survivalkit <- function(z){
+survival.survivalkit <- function(z, ...){
 if(!is.null(z$survival))print(z$survival)
 else print("survival not available: use survival option")}

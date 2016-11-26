@@ -155,11 +155,12 @@ return(z1)}
 ### standard method
 ###
 
-deviance.pbirth <- function(z) 2*z$maxlike
+deviance.pbirth <- function(object, ...) 2*object$maxlike
 
 ### print method
 ###
-print.pbirth <- function(z){
+print.pbirth <- function(x, ...){
+  z <- x ## legacy / S3methods consistency
 np <- length(z$coefficients)
 cat("\nCall:",deparse(z$call),sep="\n")
 cat("\n")

@@ -277,11 +277,12 @@ return(z1)}
 
 ### standard method
 
-deviance.intensity <- function(z) 2*z$maxlike
+deviance.intensity <- function(object, ...) 2*object$maxlike
 
 ### print method
 ###
-print.intensity <- function(z) {
+print.intensity <- function(x, ...) {
+  z <- x ## legacy / S3methods consistency
 np <- length(z$coefficients)
 cat("\nCall:",deparse(z$call),sep="\n")
 cat("\n")

@@ -230,7 +230,8 @@ z3}
 
 ### print method
 ###
-print.llrf <- function(z){
+print.llrf <- function(x, ...){
+  z <- x ## legacy / S3methods consistency
 	if(z$stratified)cat("Stratified ")
 	cat("Cox proportional hazards model with gamma frailty\n")
 	cat("\nCall:",deparse(z$call),sep="\n")

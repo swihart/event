@@ -679,17 +679,18 @@ return(z)}
 ### standard methods
 ###
 
-deviance.kalsurv <- function(z) 2*z$maxlike
+deviance.kalsurv <- function(object, ...) 2*object$maxlike
 
-fitted.kalsurv <- function(z, recursive=TRUE)
-if(recursive) z$rpred else z$pred
+fitted.kalsurv <- function(object, recursive=TRUE, ...)
+if(recursive) object$rpred else object$pred
 
-residuals.kalsurv <- function(z, recursive=TRUE)
-if(recursive) z$response$y-z$rpred else z$response$y-z$pred
+residuals.kalsurv <- function(object, recursive=TRUE, ...)
+if(recursive) object$response$y-object$rpred else object$response$y-object$pred
 
 ### print method
 ###
-print.kalsurv <- function(z,digits=max(3,.Options$digits-3),correlation=TRUE){
+print.kalsurv <- function(x,digits=max(3,.Options$digits-3),correlation=TRUE, ...){
+  z <- x ## legacy / S3methods consistency
 tvc <- !is.null(z$tvcov)
 expm <- z$intensity!="exponential"&&!is.function(z$shape)
 glm <- z$intensity=="gen logistic"

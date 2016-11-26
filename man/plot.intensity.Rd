@@ -3,23 +3,22 @@
 \alias{plot.intensity}
 \alias{plot.intensity.default}
 \usage{
-\method{plot}{intensity}(z, ...)
-\method{plot.intensity}{default}(times, censor=1, group=1, colour=TRUE, mix=1,
+\method{plot}{intensity}(x, ...)
+\method{plot.intensity}{default}(x, censor=1, group=1, colour=TRUE, mix=1,
 	ylim=c(0,1), ylab="p", xlab="Time",
-	main="Empirical Hazard Function(s)")
+	main="Empirical Hazard Function(s)", ...)
 }
 \description{
 Plot the empirical intensity curve for given times between events.
 }
 \arguments{
-\item{times}{Vector of times to events or a list of vectors of such
-times for different individuals.}
 \item{censor}{Vector of censoring indicators corresponding to the
 vector of times or to the last time in each vector of a list.}
 \item{group}{Vector indicating to which group each individual
 belongs.}
 \item{colour}{Use a different colour for each curve.}
-\item{z}{An object produced by \code{km}.}
+\item{x}{An object produced by \code{km} for \code{plot.intensity}; for \code{plot.intensity.default} it is \code{times} (Vector of times to events or a list of vectors of such
+times for different individuals.)  These changes were made for S3 methods compatability.}
 \item{mix}{...}
 \item{main}{Plotting control options.}
 \item{ylab}{Plotting control options.}

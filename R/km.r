@@ -139,14 +139,16 @@ z}
 
 ### print method
 ###
-print.km <- function(z){
+print.km <- function(x, ...){
+  z <- x ## legacy / S3methods consistency
 attr(z,"class") <- attr(z,"cdf") <- NULL
 print.default(z)}
 
 ### function to plot survivor curves output from km
 ###
-plot.km <- function(z, add=FALSE, xlim=NULL, ylim=c(0,1), main=NULL, xlab="Time",
+plot.km <- function(x, add=FALSE, xlim=NULL, ylim=c(0,1), main=NULL, xlab="Time",
 	ylab=NULL, lty=NULL, ...){
+  z <- x ## legacy / S3methods consistency
 surv <- z[,4]
 times <- z[,1]
 group <- z[,2]
@@ -200,9 +202,10 @@ invisible(cbind(ttt,kms))}
 
 ### function to plot survivor curves
 ###
-plot.surv <- function(times=NULL, survivor, group=1, cdf=FALSE, add=FALSE,
+plot.surv <- function(x=NULL, survivor, group=1, cdf=FALSE, add=FALSE,
 	xlim=NULL, ylim=c(0,1), main=NULL, xlab="Time", ylab=NULL, lty=NULL,
 	...){
+  times <- x ## legacy / S3methods consistency
 if(missing(times)||missing(survivor))
 	stop("times and survivor curve must be supplied")
 #
@@ -258,11 +261,12 @@ invisible(cbind(ttt,kms))}
 
 ### functions to plot intensity function
 ###
-plot.intensity <- function(z, ...) UseMethod("plot.intensity")
+plot.intensity <- function(x, ...) UseMethod("plot.intensity")
 
-plot.intensity.default <- function(times, censor=1, group=1, colour=TRUE,
+plot.intensity.default <- function(x, censor=1, group=1, colour=TRUE,
 	mix=1, ylim=c(0,1), ylab="p", xlab="Time",
-	main="Empirical Hazard Function(s)"){
+	main="Empirical Hazard Function(s)", ...){
+  times <- x ## legacy / S3methods consistency
 censor2 <- censor
 if(length(group)==1)group <- rep(1,length(times))
 if(length(censor)==1)censor <- rep(1,length(times))
@@ -337,8 +341,9 @@ else {
 
 ### function to plot intensity function from km
 ###
-plot.intensity.km <- function(z, add=FALSE, xlab="Time", ylab="Hazard",
+plot.intensity.km <- function(x, add=FALSE, xlab="Time", ylab="Hazard",
 	type="l", lty=NULL, ...){
+  z <- x ## legacy / S3methods consistency
 hazt <- NULL
 group <- unique(z[,2])
 if(!is.null(lty)&&length(lty)!=length(group))
@@ -367,10 +372,11 @@ invisible(cbind(z[1:(dim(z)[1]-length(group)),1],hazt))}
 ### function to plot transforms of survivor function to determine what
 ### distribution it might have
 ###
-plot.dist <- function(z) UseMethod("plot.dist")
+plot.dist <- function(x, ...) UseMethod("plot.dist")
 
-plot.dist.km <- function(z){
-#
+plot.dist.km <- function(x, ...){
+  z <- x ## legacy / S3methods consistency
+  #
 # set up parameters
 #
 oldpar <- par(mfrow=c(3,3),mar=c(5,4,4,2),font.main=1)

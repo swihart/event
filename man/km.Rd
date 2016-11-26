@@ -2,9 +2,10 @@
 \title{Kaplan-Meier Survivor Curves}
 \usage{
 km(times, censor, group=1, freq=1, cdf=FALSE)
-\method{plot}{km}(z, add=FALSE, xlim, ylim=c(0,1), main=NULL, xlab="Time", ylab=NULL, lty=NULL, ...)
-\method{plot.intensity}{km}(z, add=FALSE, xlab="Time", ylab="Hazard", type="l", lty=NULL, ...)
-\method{plot.dist}{km}(z)
+\method{plot}{km}(x, add=FALSE, xlim=NULL, ylim=c(0,1), 
+main=NULL, xlab="Time", ylab=NULL, lty=NULL, ...)
+\method{plot.intensity}{km}(x, add=FALSE, xlab="Time", ylab="Hazard", type="l", lty=NULL, ...)
+\method{plot.dist}{km}(x, ...)
 }
 \alias{km}
 \alias{plot.surv}
@@ -28,7 +29,7 @@ vector of times or to the last time in each vector of a list.}
 \item{group}{Vector indicating to which group each individual belongs.}
 \item{freq}{Vector of frequencies for grouped data.}
 \item{cdf}{If TRUE, calculate the cdf instead of the survivor curve.}
-\item{z}{An object produced by \code{km}.}
+\item{x}{An object produced by \code{km}.}
 \item{add}{Plotting control options.}
 \item{main}{Plotting control options.}
 \item{type}{Plotting control options.}
