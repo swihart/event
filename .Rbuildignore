@@ -1,6 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^README\.HTML$
 ^README-.*\.png$
 ^README_.*\.png$
 QEE2.out
