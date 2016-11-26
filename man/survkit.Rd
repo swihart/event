@@ -120,7 +120,7 @@ survkit(y, censor=cens, ccov=~x, random=id, dist="normal",
 survkit(y, censor=cens, ccov=~x, random=id, dist="loggamma",
 	estimate=c(0.1,10,0.01))
 # estimate a log-gamma random effect by integrating it out
-survkit(y, censor=cens, ccov=~x, dist="loggamma", estimate=1.4,
+survkit(y, censor=cens, ccov=~x, dist="loggamma", estimate=1.3,
 	integ=id, jointmode=TRUE)
 # try a fixed value of the log-gamma random effect, integrating it out
 survkit(y, censor=cens, ccov=~x, dist="loggamma", estimate=1,
