@@ -43,7 +43,7 @@ void ksurvg(double p[],double y[],double x[],int cens[],int *nind,int nobs[],
 	    double rpred[],int *renewal,int *rf,double bb[],
 	    int *sf,double vv[],double *like){
   int i,j,k,nm,c;
-  double a,a1,b,H,delta,lambda,omega,om,beta,bt,l1,yy,kk,ly,plap,tmp,
+  double a,a1,b,H,delta,lambda,omega,om,beta,bt,l1,yy,ly,plap,tmp,
     intercept;
   
   *like=0;

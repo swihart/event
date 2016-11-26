@@ -48,7 +48,7 @@ void ksurvb(double p[],double y[],double x[],int cens[],int *nind,
 	    double pred[],double rpred[],int *renewal,int *rf,double bb[],
 	    int *sf,double vv[],double *like){
   int i,j,k,nm,c;
-  double a,a1,b,b1,delta,lambda,omega,om,beta,bt,h,yy,kk,tmp,ly,plap,intercept,
+  double a,a1,b,b1,delta,lambda,omega,om,beta,bt,h,yy,tmp,ly,plap,intercept,
     family;
   
   *like=0;
@@ -230,7 +230,7 @@ void frailb(double p[],double y[],double x[],int cens[],int *nind,int nobs[],
 	    int *rf,double bb[],int *sf,double vv[],int *frser,
 	    double *like){
   int i,j,k,nm,ns,c,nn;
-  double b1,delta,lambda,beta,bt,l1,yy,kk,nb,ly,plap,tmp,intercept,H,btp,res;
+  double b1,delta,lambda,beta,bt,l1,yy,nb,ly,plap,tmp,intercept,H,btp,res;
   
   *like=0;
   nm=0;
