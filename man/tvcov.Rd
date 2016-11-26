@@ -4,6 +4,11 @@
 \usage{
 tvcov(y, x, tx)
 }
+\description{
+\code{tvcov} creates a vector of length \code{sum(y)} of time-varying
+covariates for use with \code{\link[event]{ehr}}. It may also be used to create
+weight vectors.
+}
 \arguments{
 \item{y}{Vector of times.}
 \item{x}{Vector covariate.}

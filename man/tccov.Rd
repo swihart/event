@@ -4,6 +4,11 @@
 \usage{
 tccov(y, x, id)
 }
+\description{
+\code{tccov} creates a vector of length \code{sum(y)} of time-constant
+covariates for use with \code{\link[event]{ehr}}. \code{id} must be numbered
+consecutively. \code{x} must have one value for each distinct \code{id},
+}
 \arguments{
 \item{y}{Vector of times.}
 \item{x}{Vector covariate.}

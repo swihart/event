@@ -5,6 +5,10 @@ Point Process}
 \usage{
 ttime(y, id)
 }
+\description{
+\code{ttime} creates a vector of length \code{sum(y)} of times since
+each individual began for use with \code{\link[event]{ehr}}.
+}
 \arguments{
 \item{y}{Vector of times.}
 \item{id}{Vector of corresponding individual identifiers for who had

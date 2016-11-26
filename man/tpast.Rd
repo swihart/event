@@ -4,6 +4,10 @@
 \usage{
 tpast(y)
 }
+\description{
+\code{tpast} creates a vector of length \code{sum(y)} of times since the
+immediately preceding event occurred for use with \code{\link[event]{ehr}}.
+}
 \arguments{
 \item{y}{Vector of times.}
 }

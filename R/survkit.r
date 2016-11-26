@@ -719,7 +719,7 @@ if((inherits(z,"Weibull")&&z$ndim+z$nstrata>1)||
 ###
 baseline <- function(z, ...) UseMethod("baseline")
 
-baseline.survivalkit <- function(z){
+baseline.survivalkit <- function(z, ...){
 if(inherits(z,"Cox")){
 	if(!is.null(z$baseline))print(z$baseline)
 	else print("baseline not available: use baseline=TRUE")}

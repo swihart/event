@@ -1,9 +1,10 @@
 \name{hexp}
-\title{Hazard Function for a Poisson Process}
+\title{Log Hazard Function for a Poisson Process}
 \alias{hexp}
 \usage{
 hexp(y, rate)
 }
+\description{Log Hazard Function for a Poisson Process}
 \arguments{
 \item{y}{Vector of times.}
 \item{rate}{Vector of rates.}

@@ -1,9 +1,10 @@
 \name{hstudent}
-\title{Hazard Function for a Student t Process}
+\title{Log Hazard Function for a Student t Process}
 \alias{hstudent}
 \usage{
 hstudent(y, m, s, f)
 }
+\description{Log Hazard Function for a Student t Process}
 \arguments{
 \item{y}{Vector of times.}
 \item{m}{Location parameter.}

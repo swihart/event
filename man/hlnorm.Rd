@@ -1,9 +1,10 @@
 \name{hlnorm}
-\title{Hazard Function for a Log Normal Process}
+\title{Log Hazard Function for a Log Normal Process}
 \alias{hlnorm}
 \usage{
 hlnorm(y, m, s)
 }
+\description{Log Hazard Function for a Log Normal Process}
 \arguments{
 \item{y}{Vector of times.}
 \item{m}{Mean parameter.}

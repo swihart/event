@@ -1,9 +1,10 @@
 \name{hcauchy}
-\title{Hazard Function for a Cauchy Process}
+\title{	Log Hazard Function for a Cauchy Process}
 \alias{hcauchy}
 \usage{
 hcauchy(y, m, s)
 }
+\description{	Log Hazard Function for a Cauchy Process}
 \arguments{
 \item{y}{Vector of times.}
 \item{m}{Location parameter.}

@@ -4,6 +4,11 @@
 \usage{
 ident(y, id)
 }
+\description{
+\code{ident} creates a vector of length \code{sum(y)} by repeating the
+values of individual identifiers for the times for use with
+\code{\link[event]{ehr}}.
+}
 \arguments{
 \item{y}{Vector of times.}
 \item{id}{Vector of corresponding individual identifiers for who had

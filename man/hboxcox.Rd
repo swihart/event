@@ -5,7 +5,7 @@ hboxcox(y, m, s, f)
 }
 \alias{hboxcox}
 \description{
-Thise function provides information about the Box-Cox
+This function provides information about the Box-Cox
 distribution with location parameter equal to \code{m}, dispersion
 equal to \code{s}, and power transformation equal to \code{f}:  log hazard.
 (See `rmutil` for the d/p/q/r boxcox functions density,

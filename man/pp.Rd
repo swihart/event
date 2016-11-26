@@ -4,6 +4,11 @@
 \usage{
 pp(y, censor=1)
 }
+\description{
+\code{pp} creates a vector of length \code{sum(y)} of zeroes with a one
+at the end of each uncensored time interval for use with
+\code{\link[event]{ehr}}.
+}
 \arguments{
 \item{y}{Vector of times.}
 \item{censor}{Vector of censoring indicators.}

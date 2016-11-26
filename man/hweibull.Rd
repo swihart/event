@@ -1,9 +1,10 @@
 \name{hweibull}
-\title{Hazard Function for a Weibull Process}
+\title{Log Hazard Function for a Weibull Process}
 \alias{hweibull}
 \usage{
 hweibull(y, s, m)
 }
+\description{Log Hazard Function for a Weibull Process}
 \arguments{
 \item{y}{Vector of times.}
 \item{s}{Shape parameter.}

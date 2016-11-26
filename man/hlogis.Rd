@@ -1,9 +1,10 @@
 \name{hlogis}
-\title{Hazard Function for a Logistic Process}
+\title{Log Hazard Function for a Logistic Process}
 \alias{hlogis}
 \usage{
 hlogis(y, m, s)
 }
+\description{Log Hazard Function for a Logistic Process}
 \arguments{
 \item{y}{Vector of times.}
 \item{m}{Location parameter.}

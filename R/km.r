@@ -367,7 +367,7 @@ invisible(cbind(z[1:(dim(z)[1]-length(group)),1],hazt))}
 ### function to plot transforms of survivor function to determine what
 ### distribution it might have
 ###
-plot.dist <- function(z, ...) UseMethod("plot.dist")
+plot.dist <- function(z) UseMethod("plot.dist")
 
 plot.dist.km <- function(z){
 #

@@ -1,9 +1,10 @@
 \name{hgamma}
-\title{Hazard Function for a Gamma Process}
+\title{Log Hazard Function for a Gamma Process}
 \alias{hgamma}
 \usage{
 hgamma(y, shape, rate=1, scale=1/rate)
 }
+\description{Log Hazard Function for a Gamma Process}
 \arguments{
 \item{y}{Vector of times.}
 \item{shape}{Shape parameter.}
