@@ -52,9 +52,9 @@ C//////////////////////////////////////////////////////////////////////*
       INTEGER ISTIME(NSTIME),INCLUD(nccov+ndcov),MAXTIM,iter_bf,itoev
       INTEGER IPEDIG(4,NDIMAX),itabl2(nrr2,ndcov),info2(nrr2,4)
       integer itabl(nrr,ndcov),err,model
-      REAL*8 SQUANT(NQUANT),xtabl(nrr,nccov),xtabl2(nrr2,nccov)
-      REAL*8 VALRHO(MXSTRA),DLOGRHO(MXSTRA)
-      REAL*8 HESS(NDIMAX,NDIMAX),surv(nstimax*nrr,3)
+      real(8) SQUANT(NQUANT),xtabl(nrr,nccov),xtabl2(nrr2,nccov)
+      real(8) VALRHO(MXSTRA),DLOGRHO(MXSTRA)
+      real(8) HESS(NDIMAX,NDIMAX),surv(nstimax*nrr,3)
 c
       INTEGER I,J,JJ,NDIM,N
       INTEGER IFAIL,NSURV,NCONS
@@ -69,15 +69,15 @@ c
       INTEGER NWITHIN,IWITHCOL,NO_LOG
       INTEGER INFO(NRR,4),IDATA(NRECMAX,MXEF_USED)
 C
-      REAL*8 F,W,OBJ,LOB,UPB,BEST,DFMIN 
-      REAL*8 EPS_BF,DLDET,DLDET0,XLIK(2)
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX),STORBETA(NDIMAX,0:NPGAUSS)
-      REAL*8 STD(NDIMAX),BOUND(NCCOV+NDCOV,3)
-      REAL*8 XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
-      REAL*8 BETAWOC(2*MXSTRA+3)
-      REAL*8 WGAUSS(5,5),XGAUSS(5,5),XMOM(0:3),XMOMP(2),W2
-      REAL*8 OBJ0,XMUK,XMUKM1,SIGK,SIGKM1,R1,R2,VAL0,VAL1,GVAL
-      REAL*8 VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
+      real(8) F,W,OBJ,LOB,UPB,BEST,DFMIN 
+      real(8) EPS_BF,DLDET,DLDET0,XLIK(2)
+      real(8) BETA(NDIMAX),GRADF(NDIMAX),STORBETA(NDIMAX,0:NPGAUSS)
+      real(8) STD(NDIMAX),BOUND(NCCOV+NDCOV,3)
+      real(8) XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) BETAWOC(2*MXSTRA+3)
+      real(8) WGAUSS(5,5),XGAUSS(5,5),XMOM(0:3),XMOMP(2),W2
+      real(8) OBJ0,XMUK,XMUKM1,SIGK,SIGKM1,R1,R2,VAL0,VAL1,GVAL
+      real(8) VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
 C    
       EXTERNAL FTOMIN
       double precision FTOMIN
@@ -447,11 +447,11 @@ c parameters for lbfgs
       INTEGER IFLAG,ICALL,NDIM,MP,LP,J,JJ,IPEDIG(4,NDIMAX)
       INTEGER NSTATUS,NOPTION,INFO(NRR,4),iplus1(nccov),iplus2(ndcov)
       INTEGER NRAND,MAXRAND,IGAM(0:NCCOV+NDCOV,3),INOR(0:NCCOV+NDCOV,3)
-      REAL*8 HESS(NDIMAX,NDIMAX),VALRHO(MXSTRA)
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX),DIAG(NDIMAX),W(NWORK)
-      REAL*8 STD(NDIMAX),DLDET,OBJ,EPS_BF
-      REAL*8 F,XTOL,GTOL,STPMIN,STPMAX,BOUND(NCCOV+NDCOV,3)
-      REAL*8 XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) HESS(NDIMAX,NDIMAX),VALRHO(MXSTRA)
+      real(8) BETA(NDIMAX),GRADF(NDIMAX),DIAG(NDIMAX),W(NWORK)
+      real(8) STD(NDIMAX),DLDET,OBJ,EPS_BF
+      real(8) F,XTOL,GTOL,STPMIN,STPMAX,BOUND(NCCOV+NDCOV,3)
+      real(8) XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
 
       COMMON /LB3/MP,LP,GTOL,STPMIN,STPMAX
       COMMON/BL8/NRAND,MAXRAND
@@ -536,11 +536,11 @@ C***********************************************************************
       INTEGER INFO(NRR,4),IDATA(NRECMAX,MXEF_USED)
 C
       REAL XDATA(NRECMAX,MXEF_USED),XDATA2(MXEF_USED,NRECMAX2)
-      REAL*8 SUMT,EPS_BF
-      REAL*8 BETA(NDIMAX),XGAM(0:NCCOV+NDCOV),BETAWOC(2*MXSTRA+3)
-      REAL*8 VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA),W1
-      REAL*8 SQUANT(NQUANT),xtabl(nrr,nccov),xtim
-      REAL*8 VALRHO(MXSTRA),DLOGRHO(MXSTRA),xtabl2(nrr2,nccov)
+      real(8) SUMT,EPS_BF
+      real(8) BETA(NDIMAX),XGAM(0:NCCOV+NDCOV),BETAWOC(2*MXSTRA+3)
+      real(8) VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA),W1
+      real(8) SQUANT(NQUANT),xtabl(nrr,nccov),xtim
+      real(8) VALRHO(MXSTRA),DLOGRHO(MXSTRA),xtabl2(nrr2,nccov)
 C
       COMMON/BL1/IFIRST,ILAST,NCOL,IRANK
       COMMON/BL3/NSTRATA,ICRHO,IANAL
@@ -958,9 +958,9 @@ C  COMPUTE THE VALUE MINIMIZING F
       INTEGER NWITHIN,IWITHCOL,NINTTDEP,NDENS
       INTEGER IGAM(0:NCCOV+NDCOV,3),INOR(0:NCCOV+NDCOV,3),IUSER(3)
       INTEGER INFO(NRR,4),iplus1(nccov),iplus2(ndcov)
-      REAL*8 HESS(NDIMAX,NDIMAX),EPS_BF
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX),BOUND(NCCOV+NDCOV,3)
-      REAL*8 FC,OBJ,XC,XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) HESS(NDIMAX,NDIMAX),EPS_BF
+      real(8) BETA(NDIMAX),GRADF(NDIMAX),BOUND(NCCOV+NDCOV,3)
+      real(8) FC,OBJ,XC,XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
 c
       COMMON/BL8/NRAND,MAXRAND  
       COMMON/BL13/ICHECK,INTEGAM,NWITHIN,IWITHCOL,
@@ -1016,15 +1016,15 @@ C added on December 10, 1996
 C <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
       REAL XDATA(NRECMAX,MXEF_USED)
 C 
-      REAL*8 GAM0,XNQGAM,OMQGAM,R1GAM,OMEG,EPS_BF,CONST 
-      REAL*8 F,U,W,W1,W2,W3,W4,XNS,XNQ,XCOV,X,DM1(7)    
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX),DOMEG(NDIMAX)
-      REAL*8 VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
-      REAL*8 VALRHO(MXSTRA),DLOGRHO(MXSTRA) 
-      REAL*8 RHO,TRHO,TPRERHO,LRHO,DLTIM,DLPRETIM               
-      REAL*8 GAMLOG,DIGAMA,GAMVAR,XNSFIX,BOUND(NCCOV+NDCOV,3)
-      REAL*8 XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
-      REAL*8 BETAWOC(2*MXSTRA+3)
+      real(8) GAM0,XNQGAM,OMQGAM,R1GAM,OMEG,EPS_BF,CONST 
+      real(8) F,U,W,W1,W2,W3,W4,XNS,XNQ,XCOV,X,DM1(7)    
+      real(8) BETA(NDIMAX),GRADF(NDIMAX),DOMEG(NDIMAX)
+      real(8) VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
+      real(8) VALRHO(MXSTRA),DLOGRHO(MXSTRA) 
+      real(8) RHO,TRHO,TPRERHO,LRHO,DLTIM,DLPRETIM               
+      real(8) GAMLOG,DIGAMA,GAMVAR,XNSFIX,BOUND(NCCOV+NDCOV,3)
+      real(8) XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) BETAWOC(2*MXSTRA+3)
 C
       COMMON/BL3/NSTRATA,ICRHO,IANAL
       COMMON/BL8/NRAND,MAXRAND
@@ -1596,18 +1596,18 @@ C <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 C         
       REAL XDATA(NRECMAX,MXEF_USED)   
 C
-      REAL*8 HESS(NDIMAX,NDIMAX),D2OMEG(NDIMAX,NDIMAX)
-      REAL*8 GAM0,CONST,XNQGAM,OMQGAM,R1GAM,R2GAM,R3GAM,OMEG      
-      REAL*8 VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
-      REAL*8 F,U,W,W1,W2,W3,W4,W5,XNS,XNQ,XCOV,XCOV2,X,DM1(7)    
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX),DOMEG(NDIMAX),DIAG2OM(NDIMAX) 
-      REAL*8 VALRHO(MXSTRA),DLOGRHO(MXSTRA) 
-      REAL*8 RHO,TRHO,TPRERHO,LRHO,DLTIM,DLPRETIM               
-      REAL*8 GAMLOG,DIGAMA,TRIGAM,GAMVAR,XNSFIX
-      REAL*8 XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
-      REAL*8 DLDET,WADD,WADD1,WADD2,BOUND(NCCOV+NDCOV,3)
-      REAL*8 STD(NDIMAX),EPS_BF
-      REAL*8 BETAWOC(2*MXSTRA+3)
+      real(8) HESS(NDIMAX,NDIMAX),D2OMEG(NDIMAX,NDIMAX)
+      real(8) GAM0,CONST,XNQGAM,OMQGAM,R1GAM,R2GAM,R3GAM,OMEG      
+      real(8) VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
+      real(8) F,U,W,W1,W2,W3,W4,W5,XNS,XNQ,XCOV,XCOV2,X,DM1(7)    
+      real(8) BETA(NDIMAX),GRADF(NDIMAX),DOMEG(NDIMAX),DIAG2OM(NDIMAX) 
+      real(8) VALRHO(MXSTRA),DLOGRHO(MXSTRA) 
+      real(8) RHO,TRHO,TPRERHO,LRHO,DLTIM,DLPRETIM               
+      real(8) GAMLOG,DIGAMA,TRIGAM,GAMVAR,XNSFIX
+      real(8) XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) DLDET,WADD,WADD1,WADD2,BOUND(NCCOV+NDCOV,3)
+      real(8) STD(NDIMAX),EPS_BF
+      real(8) BETAWOC(2*MXSTRA+3)
 C
       COMMON/BL3/NSTRATA,ICRHO,IANAL
       COMMON/BL8/NRAND,MAXRAND
@@ -2476,13 +2476,13 @@ c
       INTEGER INFO2(nrr2,4),IDATA2(MXEF_USED,NRECMAX2)                   
 C           
       REAL XDATA2(MXEF_USED,NRECMAX2) 
-      REAL*8 SQUANT(NQUANT),surv(nstimax*nrr,3)
-      REAL*8 CUM_RISK,U,W1,W2,W3,TRHO,XRHO,OMEG,EPS_BF 
-      REAL*8 SX,RHO,XCOV,DLXST,REST(NSTIMAX)    
-      REAL*8 BETA(NDIMAX),TPRERHO,LRHO,DLTIM
-      REAL*8 BETAWOC(2*MXSTRA+3)
-      REAL*8 VALRHO(MXSTRA),DLOGRHO(MXSTRA)
-      REAL*8 VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
+      real(8) SQUANT(NQUANT),surv(nstimax*nrr,3)
+      real(8) CUM_RISK,U,W1,W2,W3,TRHO,XRHO,OMEG,EPS_BF 
+      real(8) SX,RHO,XCOV,DLXST,REST(NSTIMAX)    
+      real(8) BETA(NDIMAX),TPRERHO,LRHO,DLTIM
+      real(8) BETAWOC(2*MXSTRA+3)
+      real(8) VALRHO(MXSTRA),DLOGRHO(MXSTRA)
+      real(8) VECLOG(NTIMMAX),VECEXP(NTIMMAX,MXSTRA)
 C
       COMMON/BL3/NSTRATA,ICRHO,IANAL
       COMMON/BL13/ICHECK,INTEGAM,NWITHIN,IWITHCOL,
@@ -2661,8 +2661,8 @@ C
       SUBROUTINE LBFGS(N,M,X,F,G,DIAGCO,DIAG,EPS,XTOL,W,IFLAG)
       IMPLICIT NONE
       INTEGER N,M,IFLAG
-      REAL*8 X(N),G(N),DIAG(N),W(N*(2*M+1)+2*M)
-      REAL*8 F,EPS,EPS2,XTOL
+      real(8) X(N),G(N),DIAG(N),W(N*(2*M+1)+2*M)
+      real(8) F,EPS,EPS2,XTOL
       LOGICAL DIAGCO
 C
 C        LIMITED MEMORY BFGS METHOD FOR LARGE SCALE OPTIMIZATION
@@ -2838,7 +2838,7 @@ C
 C     The subroutine contains one common area, which the user may wish to
 C    reference:
 C
-         REAL*8 GTOL,STPMIN,STPMAX 
+         real(8) GTOL,STPMIN,STPMAX 
          COMMON /LB3/MP,LP,GTOL,STPMIN,STPMAX
 C 
 C    MP  is an INTEGER variable with default value 6. It is used as the
@@ -2881,7 +2881,7 @@ C
 C 
 C     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 C
-      REAL*8 ONE,ZERO,GNORM,DDOT,STP1,FTOL,
+      real(8) ONE,ZERO,GNORM,DDOT,STP1,FTOL,
      .                 STP,YS,YY,SQ,YR,CC,BETA,XNORM
       INTEGER MP,LP,ITER,NFUN,POINT,ISPT,IYPT,MAXFEV,INFO,
      .        BOUND,NPT,CP,I,NFEV,INMC,IYCN,ISCN
@@ -3082,7 +3082,7 @@ C   ----------------------------------------------------------
 C
       BLOCK DATA LB2
       INTEGER LP,MP
-      REAL*8 GTOL,STPMIN,STPMAX
+      real(8) GTOL,STPMIN,STPMAX
       COMMON /LB3/MP,LP,GTOL,STPMIN,STPMAX
       DATA MP,LP,GTOL,STPMIN,STPMAX/6,6,9.0D-01,1.0D-20,1.0D+20/
       END
@@ -3100,7 +3100,7 @@ c
       implicit none
 
       integer i,incx,incy,ix,iy,m,mp1,n
-      REAL*8 dx(n),dy(n),da,zero
+      real(8) dx(n),dy(n),da,zero
       DATA ZERO/0.0D+0/
 c
       if(n.le.0)return
@@ -3205,8 +3205,8 @@ C
       SUBROUTINE MCSRCH(N,X,F,G,S,STP,FTOL,XTOL,MAXFEV,INFO,NFEV,WA)
       IMPLICIT NONE
       INTEGER N,LP,MP,MAXFEV,INFO,NFEV
-      REAL*8 F,STP,FTOL,GTOL,XTOL,STPMIN,STPMAX
-      REAL*8 X(N),G(N),S(N),WA(N)
+      real(8) F,STP,FTOL,GTOL,XTOL,STPMIN,STPMAX
+      real(8) X(N),G(N),S(N),WA(N)
       COMMON /LB3/MP,LP,GTOL,STPMIN,STPMAX
       SAVE
 C
@@ -3332,7 +3332,7 @@ C
 C     **********
       INTEGER INFOC,J
       LOGICAL BRACKT,STAGE1
-      REAL*8 DG,DGM,DGINIT,DGTEST,DGX,DGXM,DGY,DGYM,
+      real(8) DG,DGM,DGINIT,DGTEST,DGX,DGXM,DGY,DGYM,
      *       FINIT,FTEST1,FM,FX,FXM,FY,FYM,P5,P66,STX,STY,
      *       STMIN,STMAX,WIDTH,WIDTH1,XTRAPF,ZERO
       DATA P5,P66,XTRAPF,ZERO /0.5D0,0.66D0,4.0D0,0.0D0/
@@ -3510,7 +3510,7 @@ C
      *                 STPMIN,STPMAX,INFO)
       IMPLICIT NONE
       INTEGER INFO
-      REAL*8 STX,FX,DX,STY,FY,DY,STP,FP,DP,STPMIN,STPMAX
+      real(8) STX,FX,DX,STY,FY,DY,STP,FP,DP,STPMIN,STPMAX
       LOGICAL BRACKT,BOUND
 C
 C     SUBROUTINE MCSTEP
@@ -3569,7 +3569,7 @@ C
 C     ARGONNE NATIONAL LABORATORY. MINPACK PROJECT. JUNE 1983
 C     JORGE J. MORE', DAVID J. THUENTE
 C
-      REAL*8 GAMMA,P,Q,R,S,SGND,STPC,STPF,STPQ,THETA,ZERO
+      real(8) GAMMA,P,Q,R,S,SGND,STPC,STPF,STPQ,THETA,ZERO
       DATA ZERO/0.0D+0/
       INFO = 0
 C
@@ -3742,7 +3742,7 @@ C
 
       include 'parinclu.h'
 
-      REAL*8 AX,BX,TOL,OBJ 
+      real(8) AX,BX,TOL,OBJ 
 C***PURPOSE
 C     An approximation to the point where  FTOMIN  attains a minimum  on
 C     the interval (AX,BX) is determined as the value of the function
@@ -3802,11 +3802,11 @@ C***END PROLOGUE
       integer ICONS(0:NDIMAX),INFO(NRR,4)
       integer IGAM(0:NCCOV+NDCOV,3),INOR(0:NCCOV+NDCOV,3),err,iter_bf
       integer iplus1(nccov),iplus2(ndcov),IPEDIG(4,NDIMAX)
-      REAL*8 HESS(NDIMAX,NDIMAX),BOUND(NCCOV+NDCOV,3)
-      REAL*8 XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
-      REAL*8 A,B,C,D,E,EPS,XM,P,Q,R,TOL1,TOL2,U,V,W
-      REAL*8 FU,FV,FW,FX,X,BETA(NDIMAX)
-      REAL*8 DABS,DSQRT,DSIGN
+      real(8) HESS(NDIMAX,NDIMAX),BOUND(NCCOV+NDCOV,3)
+      real(8) XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) A,B,C,D,E,EPS,XM,P,Q,R,TOL1,TOL2,U,V,W
+      real(8) FU,FV,FW,FX,X,BETA(NDIMAX)
+      real(8) DABS,DSQRT,DSIGN
       EXTERNAL FTOMIN
       double precision FTOMIN
 C
@@ -4070,7 +4070,7 @@ C  REORDER IF DESCENDING ORDER
       END 
       SUBROUTINE XSORT(X,N,Y,IW,ORD)
 C---------------------------------------------------------------------
-C AS FOR JSORT BUT X AND Y ARE REAL*8 VECTORS
+C AS FOR JSORT BUT X AND Y ARE real(8) VECTORS
 C---------------------------------------------------------------------
 C
 
@@ -4078,7 +4078,7 @@ C
 
       INTEGER I,J,K,L,M,N,JMI,JMK,MID,NM1,IP1,LMI
       INTEGER IW(NDIMAX)
-      REAL*8 X(NDIMAX),Y(NDIMAX),T,AMED,HOLD 
+      real(8) X(NDIMAX),Y(NDIMAX),T,AMED,HOLD 
       CHARACTER ORD
 C
 C     CHECK THE INPUT ARGUMENTS FOR ERRORS
@@ -4185,14 +4185,14 @@ C  REORDER IF DESCENDING ORDER
       END 
 
 C***********************************************
-      REAL*8 FUNCTION GAMLOG(XVALUE)
+      real(8) FUNCTION GAMLOG(XVALUE)
 C
 C     ALGORITHM AS245  APPL. STATIST. (1989) VOL. 38, NO. 2
 C
 C     Calculation of the logarithm of the gamma function
 C
       IMPLICIT NONE
-      REAL*8 ALR2PI, FOUR, HALF, ONE, ONEP5, R1(9), R2(9),
+      real(8) ALR2PI, FOUR, HALF, ONE, ONEP5, R1(9), R2(9),
      +          R3(9), R4(5), TWELVE, X, X1, X2, XLGE, XVALUE,
      +          Y, ZERO
 C
@@ -4290,8 +4290,8 @@ C     ALGORITHM AS 103  APPL. STATIST. (1976) VOL.25, NO.3
 C
 C     Calculates DIGAMMA(X) = D( LOG( GAMMA(X))) / DX
 C
-      REAL*8 DIGAMA,ZERO, HALF, ONE
-      REAL*8 R,S,C,S3,S4,S5,D1,Y,X 
+      real(8) DIGAMA,ZERO, HALF, ONE
+      real(8) R,S,C,S3,S4,S5,D1,Y,X 
 C
 C     Set constants, SN = Nth Stirling coefficient, D1 = DIGAMMA(1.0)
 C
@@ -4334,7 +4334,7 @@ c        algorithm as121   Appl. Statist. (1978) vol 27, no. 1
 c
 c        calculates trigamma(x) = d**2(log(gamma(x))) / dx**2
 c
-      real*8 trigam,a, b, one, half, b2, b4, b6,b8, x, y, z, zero
+      real(8) trigam,a, b, one, half, b2, b4, b6,b8, x, y, z, zero
       data a, b, one, half /1.0d-4, 5.0d0, 1.0d0, 0.5d0/
       data zero /0.0d0/
 c
@@ -4406,11 +4406,11 @@ C
 
 	include 'parinclu.h'
 c
-      REAL*8 TOL                
+      real(8) TOL                
       PARAMETER(TOL=1.D-10)      
 C           
       INTEGER LDA,N,INFO,I,J,JJ,JM1,K,ICONS(0:NDIMAX),ICODE,err
-      REAL*8  A(LDA,*),DDOT,T,S
+      real(8)  A(LDA,*),DDOT,T,S
 C***
          DO 30 J = 1, N
             INFO = J
@@ -4643,17 +4643,17 @@ c
       INTEGER NCOEF(0:MXEF),ICOEF(0:MXEF),INOR(0:NCCOV+NDCOV,3)
       INTEGER IRANK(NDIMAX),IGAM(0:NCCOV+NDCOV,3)
 C
-      REAL*8 F,W,OBJ,LOB,UPB,BEST,DFMIN
-      REAL*8 DLDET,XCOEF(MXEF),EPS_BF
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX)         
-      REAL*8 XLIK(2),BOUND(NCCOV+NDCOV,3)
-      REAL*8 STD(NDIMAX),STORBETA(NDIMAX,0:NPGAUSS)
-      REAL*8 XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
-      REAL*8 WGAUSS(5,5),XGAUSS(5,5),XMOM(0:3),XMOMP(2),W2
-      REAL*8 OBJ0,XMUK,XMUKM1,SIGK,SIGKM1,R1,R2,VAL0,VAL1,GVAL
-      REAL*8 SQUANT(NQUANT),xtabl(nrr,nccov),xtabl2(nrr2,nccov)
-      REAL*8 HESS(NDIMAX,NDIMAX),valrho(MXSTRA),km(ut,4),resid(ut,3)
-      real*8 surv(nstimax*nrr,3)
+      real(8) F,W,OBJ,LOB,UPB,BEST,DFMIN
+      real(8) DLDET,XCOEF(MXEF),EPS_BF
+      real(8) BETA(NDIMAX),GRADF(NDIMAX)         
+      real(8) XLIK(2),BOUND(NCCOV+NDCOV,3)
+      real(8) STD(NDIMAX),STORBETA(NDIMAX,0:NPGAUSS)
+      real(8) XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) WGAUSS(5,5),XGAUSS(5,5),XMOM(0:3),XMOMP(2),W2
+      real(8) OBJ0,XMUK,XMUKM1,SIGK,SIGKM1,R1,R2,VAL0,VAL1,GVAL
+      real(8) SQUANT(NQUANT),xtabl(nrr,nccov),xtabl2(nrr2,nccov)
+      real(8) HESS(NDIMAX,NDIMAX),valrho(MXSTRA),km(ut,4),resid(ut,3)
+      real(8) surv(nstimax*nrr,3)
       double precision ftomin
       EXTERNAL  FTOMIN
 C           
@@ -4951,7 +4951,7 @@ C***********************************************************************
 c
 	include 'parinclu.h'
 c
-      REAL*8 CONST
+      real(8) CONST
 C
       INTEGER NDIM,NSTATE,IUSER(3),nccov,ndcov,nrr
       INTEGER NRAND,MAXRAND,I,J,JJ,K,IDF,ICODE,IPRETIM                   
@@ -4963,10 +4963,10 @@ C
       INTEGER ICRHO,IPEDIG(4,NDIMAX)
 C           
       REAL XDATA(NRECMAX,MXEF_USED)
-      REAL*8 CUM_RISK,F,U,UMINUS,W,WMINUS,XFAIL,XCOV,R,X,DM1(7)         
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX),DC_RISK(NDIMAX)         
-      REAL*8 GAMLOG,XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
-      REAL*8 XCOEF(MXEF),BOUND(NCCOV+NDCOV,3)
+      real(8) CUM_RISK,F,U,UMINUS,W,WMINUS,XFAIL,XCOV,R,X,DM1(7)         
+      real(8) BETA(NDIMAX),GRADF(NDIMAX),DC_RISK(NDIMAX)         
+      real(8) GAMLOG,XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) XCOEF(MXEF),BOUND(NCCOV+NDCOV,3)
 C           
       COMMON/BL3/NSTRATA,ICRHO,IANAL
       COMMON/BL8/NRAND,MAXRAND
@@ -5324,7 +5324,7 @@ C***********************************************************************
 c
       include 'parinclu.h'
 c
-      REAL*8 CONST
+      real(8) CONST
 C
       INTEGER NRAND,MAXRAND,NDIM,ICHECK,nccov,ndcov,nrr,err
       INTEGER I,J,JJ,K,L,LL,N,NREC,ICODE,IPRETIM,JOB
@@ -5336,14 +5336,14 @@ C
       INTEGER IGAM(0:NCCOV+NDCOV,3),NCOEF(0:MXEF),ICOEF(0:MXEF)
 C
       REAL XDATA(NRECMAX,MXEF_USED)
-      REAL*8 XCOEF(MXEF)
-      REAL*8 CUM_RISK,F,U,UMINUS,W,WMINUS,XFAIL,XCOV,XCOV2,R,X,DM1(7)  
-      REAL*8 DLDET 
-      REAL*8 BETA(NDIMAX),GRADF(NDIMAX),DC_RISK(NDIMAX)                 
-      REAL*8 GAMLOG,HESS(NDIMAX,NDIMAX),STD(NDIMAX)      
+      real(8) XCOEF(MXEF)
+      real(8) CUM_RISK,F,U,UMINUS,W,WMINUS,XFAIL,XCOV,XCOV2,R,X,DM1(7)  
+      real(8) DLDET 
+      real(8) BETA(NDIMAX),GRADF(NDIMAX),DC_RISK(NDIMAX)                 
+      real(8) GAMLOG,HESS(NDIMAX,NDIMAX),STD(NDIMAX)      
       PARAMETER(NMAX=10)
-      REAL*8 D2C_RISK(NDIMAX,NDIMAX),BOUND(NCCOV+NDCOV,3)
-      REAL*8 XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
+      real(8) D2C_RISK(NDIMAX,NDIMAX),BOUND(NCCOV+NDCOV,3)
+      real(8) XGAM(0:NCCOV+NDCOV),XNOR(0:NCCOV+NDCOV)
 C
       COMMON/BL8/NRAND,MAXRAND
       COMMON/BL17/XCOEF,NCOEF,ICOEF
@@ -5946,18 +5946,18 @@ C
 c$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 c added on October 9, 1997
       INTEGER NRESI
-      REAL*8 km(ut,4),resid(ut,3),xic,xmart,xdev
+      real(8) km(ut,4),resid(ut,3),xic,xmart,xdev
 c$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 C           
       REAL XDATA(NRECMAX,MXEF_USED),XDATA2(MXEF_USED,NRECMAX2)
-      real*8 surv(nstimax*nrr,3)
+      real(8) surv(nstimax*nrr,3)
 C 
-      REAL*8 XCOEF(MXEF)
-      REAL*8 XJUMP(NTIMMAX),XLAMB0(NTIMMAX),S0(NTIMMAX),VARS0(NTIMMAX)  
-      REAL*8 LOGT(NTIMMAX),LOGLOGS0(NTIMMAX),SQUANT(NSTIMAX)   
-      REAL*8 CUM_RISK,CUM_RIS2,CUM_RSKP,U,UMINUS,W,WMINUS,XFAIL,XCOV,R  
-      REAL*8 XSTIME,XL_PREV,SX,SX2,REST(NSTIMAX)    
-      REAL*8 BETA(NDIMAX)   
+      real(8) XCOEF(MXEF)
+      real(8) XJUMP(NTIMMAX),XLAMB0(NTIMMAX),S0(NTIMMAX),VARS0(NTIMMAX)  
+      real(8) LOGT(NTIMMAX),LOGLOGS0(NTIMMAX),SQUANT(NSTIMAX)   
+      real(8) CUM_RISK,CUM_RIS2,CUM_RSKP,U,UMINUS,W,WMINUS,XFAIL,XCOV,R  
+      real(8) XSTIME,XL_PREV,SX,SX2,REST(NSTIMAX)    
+      real(8) BETA(NDIMAX)   
 C           
       COMMON/BL3/NSTRATA,ICRHO,IANAL
       COMMON/BL6/XJUMP          
@@ -6581,7 +6581,7 @@ c
 	include 'parinclu.h'
 c
 	INTEGER IDICHO,ILT,IHT,KLT,KHT,KDIF,KMID
-      REAL*8 XJUMP(NTIMMAX),XSTIME                  
+      real(8) XJUMP(NTIMMAX),XSTIME                  
 C           
       COMMON/BL6/XJUMP          
 C           

@@ -120,11 +120,13 @@ survkit(y, censor=cens, ccov=~x, random=id, dist="normal",
 survkit(y, censor=cens, ccov=~x, random=id, dist="loggamma",
 	estimate=c(0.1,10,0.01))
 # estimate a log-gamma random effect by integrating it out
+\dontrun{
 survkit(y, censor=cens, ccov=~x, dist="loggamma", estimate=1.3,
 	integ=id, jointmode=TRUE)
 # try a fixed value of the log-gamma random effect, integrating it out
 survkit(y, censor=cens, ccov=~x, dist="loggamma", estimate=1,
 	integ=id)
+}
 #
 # Cox model with one time-constant covariate
 print(z <- survkit(y, censor=cens, ccov=~x, model="Cox", residuals=TRUE,
