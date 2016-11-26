@@ -4652,7 +4652,7 @@ C
       REAL*8 WGAUSS(5,5),XGAUSS(5,5),XMOM(0:3),XMOMP(2),W2
       REAL*8 OBJ0,XMUK,XMUKM1,SIGK,SIGKM1,R1,R2,VAL0,VAL1,GVAL
       REAL*8 SQUANT(NQUANT),xtabl(nrr,nccov),xtabl2(nrr2,nccov)
-      REAL*8 HESS(NDIMAX,NDIMAX),valrho,km(ut,4),resid(ut,3)
+      REAL*8 HESS(NDIMAX,NDIMAX),valrho(MXSTRA),km(ut,4),resid(ut,3)
       real*8 surv(nstimax*nrr,3)
       double precision ftomin
       EXTERNAL  FTOMIN
