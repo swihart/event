@@ -72,12 +72,14 @@ i2 <- cbind(1:n,2:(n+1))
 prob <- function(p,n) {
 	x[i1[1:(n+1),]] <- -lambda(p,0:n,n)
 	x[i2[1:n,,drop=FALSE]] <- lambda(p,0:(n-1),n)
-	pr <- mexp(x[1:(n+1),1:(n+1)],type=type)[1,]}
+	pr <- mexp(x[1:(n+1),1:(n+1)],type=type)[1,]
+	pr}
 #	z <- eigen(x[1:(n+1),1:(n+1)],sym=FALSE)
 #	pr <- (z$vectors%*%diag(exp(z$values))%*%solve(z$vectors))[1,]}
 prob1 <- function(p){
 	pr <- NULL
-	for(i in 1:nr)pr <- c(pr,prob(p,n1[i]))}
+	for(i in 1:nr)pr <- c(pr,prob(p,n1[i]))
+	pr}
 #
 # call nlm to optimize
 #
