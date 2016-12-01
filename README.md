@@ -1,7 +1,7 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/swihart/event.svg?branch=master)](https://travis-ci.org/swihart/event) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/event)](https://cran.r-project.org/package=event) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/event)
 
-<!-- README.md is generated from README.Rmd. Please edit README.Rmd -->
+<!-- README.md is generated from README.Rmd. Please edit README.Rmd (this file)-->
 `event` R package
 =================
 
