@@ -6,7 +6,7 @@ sudo: required
 
 matrix:
   include:
-    - os: debian
+    - os: linux
       compiler: gcc
       addons:
         apt:
@@ -25,3 +25,14 @@ notifications:
   email:
     on_success: change
     on_failure: change
+
+
+services:
+  - docker
+
+script:
+  - wget -O- http://travis.debian.net/script.sh | sh -
+
+branches:
+  except:
+    - /^debian\/\d/
