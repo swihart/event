@@ -16,7 +16,13 @@ matrix:
         - COMPILER=g++-6
         - CC=gcc=6
         - CXX=g++-6
-        
+
+before_install:
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 100
+  - mkdir -p ~/.R
+  - echo "VkVSPS01CkNDPWdjYyQoVkVSKSAtc3RkPWMxMSAKQ1hYPWcrKyQoVkVSKQpTSExJQl9DWFhMRD1nKyskKFZFUikKRkM9Z2ZvcnRyYW4KRjc3PWdmb3J0cmFuCg==" | base64 -d > ~/.R/Makevars
+  - cat ~/.R/Makevars
+  
 env:
  global:
    - CRAN: http://cran.rstudio.com
@@ -25,14 +31,3 @@ notifications:
   email:
     on_success: change
     on_failure: change
-
-
-services:
-  - docker
-
-script:
-  - wget -O- http://travis.debian.net/script.sh | sh -
-
-branches:
-  except:
-    - /^debian\/\d/
