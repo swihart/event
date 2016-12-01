@@ -6,7 +6,7 @@ sudo: required
 
 matrix:
   include:
-    - os: linux
+    - os: debian
       compiler: gcc
       addons:
         apt:
