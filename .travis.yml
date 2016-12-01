@@ -3,7 +3,20 @@
 language: r
 warnings_are_errors: true
 sudo: required
-r_check_args: --as-cran --use-valgrind
+
+
+matrix:
+  include:
+    - os: linux
+      r: release
+      r_check_args: --as-cran --use-valgrind
+      addons:
+        apt:
+          packages:
+          - valgrind
+      env: NB='w/ valgrind' ## Just a label
+    
+
 
 env:
  global:
