@@ -11,11 +11,11 @@ matrix:
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-5']
+          packages: ['g++-6']
       env:
-        - COMPILER=g++-5
-        - CC=gcc=5
-        - CXX=g++-5
+        - COMPILER=g++-6
+        - CC=gcc=6
+        - CXX=g++-6
         
 env:
  global:
