@@ -10,6 +10,10 @@ to pass CRAN checks.
 I'll try to document the changes henceforth here and at 
 https://github.com/swihart/event/issues.
 
+  *  Removed survkit.  The survkit that was associated with `event` v 1.0 was dated.
+  A newer version of survkit, with accessibility to R, is available.  More info
+  at https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3693034/ and 
+  http://www.nas.boku.ac.at/nuwi/the-survival-kit/
 
 **Above this line will be News/Changes for `event` only**
 

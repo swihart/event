@@ -8,15 +8,19 @@ sudo: required
 matrix:
   include:
     - os: linux
+      compiler: gcc
       r: release
       r_check_args: --as-cran --use-valgrind
       addons:
         apt:
+          sources: ['ubuntu-toolchain-r-test']
           packages:
           - valgrind
-      env: NB='w/ valgrind' ## Just a label
-    
-
+          - ['g++-6']
+      env:
+        - COMPILER=g++-6
+        - CC=gcc=6
+        - CXX=g++-6
 
 env:
  global:

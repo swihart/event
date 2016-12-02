@@ -2,6 +2,10 @@
 Bruce Swihart  
 November 2016  
 
+## Resubmission 1
+I removed survkit.r/.Rd/.f.  Turns out survkit is available as of 2013 in a nice update
+from the original authors of survkit.f.  Added this info to NEWS.
+
 ## Test environments
 * local OS X install: R version 3.3.2 (2016-10-31)
 * ubuntu 12.04 (on travis-ci): R version 3.3.1 (2016-06-21)
