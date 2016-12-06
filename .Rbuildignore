@@ -12,3 +12,4 @@ changes.txt
 ^.*\.o$
 \.so$
 \.dll$
+^NAMESPACE_withsurvkit$
