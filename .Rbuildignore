@@ -13,3 +13,5 @@ changes.txt
 \.so$
 \.dll$
 ^NAMESPACE_withsurvkit$
+^survkit\.r$
+^survkit\.Rd$
