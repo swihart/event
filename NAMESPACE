@@ -9,8 +9,7 @@ ehr,pp,ident,tpast,ttime,bp,tccov,tvcov,vdm,deviance.intensity,print.intensity,
 hboxcox,hburr,hcauchy,hexp,hgextval,hgamma,hggamma,hhjorth,hinvgauss,hlaplace,hlnorm,hlogis,hglogis,hnorm,hpareto,hstudent,hweibull,hgweibull,hskewlaplace,
 kalsurv,deviance.kalsurv,fitted.kalsurv,residuals.kalsurv,print.kalsurv,
 km,print.km,plot.km,plot.surv,plot.intensity,plot.intensity.default,plot.intensity.km,plot.dist,plot.dist.km,
-pbirth,deviance.pbirth,print.pbirth,
-survkit,residuals.survivalkit,print.survivalkit,baseline,baseline.survivalkit,survival,survival.survivalkit)
+pbirth,deviance.pbirth,print.pbirth)
 
   importFrom("grDevices", "gray")
   importFrom("graphics", "hist", "lines", "par", "plot", "text")
@@ -19,8 +18,6 @@ survkit,residuals.survivalkit,print.survivalkit,baseline,baseline.survivalkit,su
              "pgamma", "plnorm", "plogis", "pnorm", "poisson",
              "pweibull", "qnorm", "terms")
   
-  
-S3method(   baseline, survivalkit )
 S3method(   deviance, intensity )
 S3method(   deviance, kalsurv)
 S3method(   deviance, pbirth )
@@ -37,7 +34,4 @@ S3method(  print, kalsurv )
 S3method(  print, km )
 S3method(  print, llrf) 
 S3method(  print, pbirth) 
-S3method(  print, survivalkit)
 S3method(  residuals, kalsurv )
-S3method(  residuals, survivalkit )
-S3method(  survival, survivalkit)
