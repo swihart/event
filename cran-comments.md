@@ -1,6 +1,6 @@
 # event R package
 Bruce Swihart  
-November 2016  
+December 2016  
 
 ## Resubmission 1
 I removed survkit.r/.Rd/.f.  Turns out survkit is available as of 2013 in a nice update
