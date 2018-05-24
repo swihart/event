@@ -1,4 +1,4 @@
-useDynLib("event")
+useDynLib("event",.registration=TRUE)
 
 import(rmutil)
 
