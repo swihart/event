@@ -3,3 +3,6 @@
 language: r
 warnings_are_errors: true
 sudo: required
+
+env:
+  - _R_S3_METHOD_LOOKUP_BASEENV_AFTER_GLOBALENV_=true
