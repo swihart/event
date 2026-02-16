@@ -1,5 +1,29 @@
 # event R package
 Bruce Swihart  
+FEB 2026
+
+## Submission 1
+
+  * fix news.md note
+
+## Test environments
+  * Local OS X: R version 4.5.2 (2025-10-31) 
+  * R Under development (unstable) (2026-02-14 r89420 ucrt)
+
+## R CMD check results
+There were no ERRORs or WARNINGs or NOTEs.
+
+
+## R CMD check results
+There were no ERRORs or WARNINGs. 
+
+There was 1 NOTE:
+
+* 1st submission (Package was archived on CRAN, see Miscellaneous)
+
+
+# event R package
+Bruce Swihart  
 November 2016  
 
 ## Resubmission 1

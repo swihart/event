@@ -1,5 +1,5 @@
-useDynLib("event")
-
+#useDynLib("event")
+useDynLib(event, .registration=TRUE)
 import(rmutil)
 
 export(autointensity,
@@ -19,7 +19,7 @@ survkit,residuals.survivalkit,print.survivalkit,baseline,baseline.survivalkit,su
              "pgamma", "plnorm", "plogis", "pnorm", "poisson",
              "pweibull", "qnorm", "terms")
   
-  
+
 S3method(   baseline, survivalkit )
 S3method(   deviance, intensity )
 S3method(   deviance, kalsurv)
@@ -27,9 +27,11 @@ S3method(   deviance, pbirth )
 S3method(   fitted, kalsurv )
 S3method(   plot, dist )
 S3method(   plot, dist.km) 
+S3method(   plot.dist, km) 
 S3method(  plot, intensity) 
 S3method(  plot, intensity.default )
 S3method(  plot, intensity.km )
+S3method(   plot.intensity, km) 
 S3method(  plot, km )
 S3method(  plot, surv) 
 S3method(  print, intensity)
